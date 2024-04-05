@@ -3,6 +3,7 @@ import { getFirestore } from "firebase/firestore";
 // import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 // import { sign } from "crypto";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyBmno2mvP8YTKKlBdcBb6pPn3l5cb8pKJA",
   authDomain: "splash-wash-f27d8.firebaseapp.com",
