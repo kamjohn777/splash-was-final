@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <h2>Register page</h2>
+
+    <form class="register">
+      <label for="email">Email:</label>
+      <input type="text" name="email" required />
+      <label for="password">Password:</label>
+      <input type="password" name="password" required />
+      <label for="firthName">First Name:</label>
+      <input type="text" name="firstName" id="fnameInput" />
+      <label for="lastName">Last Name:</label>
+      <input type="text" name="lastName" id="lnameInput"/>
+
+      <button type="submit" class="btn btn-primary">Create New user</button>
+      <a href="../dist/Login.html">
+        <button type="submit" class="btn btn-primary">sign in</button>
+      </a>
+    </form>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./bundle.js"></script>
+    <script type="module" >
+        import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { getDatabase, set, ref } from "firebase/database";
+
+const auth = getAuth();
+
+
+
+console.log("Script started");
+const signUpForm = $('.register');
+console.log("Form selected:", signUpForm);
+
+signUpForm.on('submit', async (e) => {
+    console.log("Form submitted");
+    e.preventDefault();
+
+    const email = signUpForm.find('input[name="email"]').val();
+    const password = signUpForm.find('input[name="password"]').val();
+    console.log("Email:", email, "Password:", password);
+
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) => {
+        console.log('user created:', cred.user);
+        signUpForm.reset();
+    })
+    .catch(err => {
+        console.log(err.message);
+    });
+});
+
+onAuthStateChanged(auth, user => {
+    if(user){
+        console.log('user logged in:', user);
+        window.location.assign('Home.html');
+    }else{
+        console.log('user logged out');
+        window.location.assign('Login.html');
+    }
+});
+    </script>
+  </body>
+</html>
