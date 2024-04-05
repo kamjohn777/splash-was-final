@@ -4,28 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./CSS/register.css">
+    <link rel="stylesheet" href="./CSS/tailwind.css">
+    <link rel="stylesheet" href="../dist/CSS/tailwindInput.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Register</title>
   </head>
   <body>
-    <h2>Register page</h2>
 
-    <form class="register">
-      <h3>Register User</h3>
-      <label for="email">Email:</label>
-      <input type="text" name="email" id="emailInp" required />
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="passwordInp" required />
-      <label for="firstName">First Name:</label>
-      <input type="text" name="firstName" id="fnameInput" />
-      <label for="lastName">Last Name:</label>
-      <input type="text" name="lastName" id="lnameInput" />
+    <div class="main_container">
 
-      <button type="submit" class="btn btn-primary">Create New user</button>
-      <a href="../dist/Login.html">
-        <button type="button" class="btn btn-primary">Sign in</button>
-      </a>
-    </form>
+    <div class="left-container">
+        <div class="left-content-wrap">
+            <div class="logo-wrap">
+                <div class="logo-img-wrap">
+                    <img src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg" alt="logo" />
+                </div>
+                <h2>Splash Wash</h2>
+            </div>
+            <hr>
+            <div class="greeting-wrap">
+                <h3 class="">Welcome to the <br> Splash Wash</h3>
+                    <p>Our car wash service is designed to give your vehicle the ultimate clean and shit it deserves</p>
+            </div>
+            <div class="many-user-wrap">
+                <div class="image-list">
+                    <!-- user images will go here -->
+                </div>
+                <p>More then <b>170K+</b> people <br>used our service</p>
+            </div>
+        </div>
+    </div>
 
+    <div class="right-container">
+        <form class="register">
+            <h3>Register User</h3>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="emailInp" required />
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="passwordInp" required />
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="fnameInput" />
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lnameInput" />
+      
+            <button type="submit" class="btn btn-primary">Create New user</button>
+            <a href="../dist/Login.html">
+              <button type="button" class="btn btn-primary">Sign in</button>
+            </a>
+          </form>
+      
+    </div>
+
+</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./bundle.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script> -->
@@ -42,13 +75,14 @@
       } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
       const firebaseConfig = {
-        apiKey: "AIzaSyBmno2mvP8YTKKlBdcBb6pPn3l5cb8pKJA",
-        authDomain: "splash-wash-f27d8.firebaseapp.com",
-        projectId: "splash-wash-f27d8",
-        storageBucket: "splash-wash-f27d8.appspot.com",
-        messagingSenderId: "1072800525434",
-        appId: "1:1072800525434:web:7b423933d321c7e963dfc3",
-      };
+  apiKey: "AIzaSyBmno2mvP8YTKKlBdcBb6pPn3l5cb8pKJA",
+  authDomain: "splash-wash-f27d8.firebaseapp.com",
+  databaseurl: "https://splash-wash-f27d8-default-rtdb.firebaseio.com/",
+  projectId: "splash-wash-f27d8",
+  storageBucket: "splash-wash-f27d8.appspot.com",
+  messagingSenderId: "1072800525434",
+  appId: "1:1072800525434:web:7b423933d321c7e963dfc3"
+};
 
       const app = initializeApp(firebaseConfig);
       const db = getDatabase(app);
@@ -71,6 +105,17 @@
               firstName: FnameInp.val(),
               lastName: LnameInp.val(),
             });
+
+            // Store user info in local storage
+            localStorage.setItem("user-cred", JSON.stringify(credential.user));
+            localStorage.setItem("user-info", JSON.stringify({
+              email: EmailInp.val(),
+              firstName: FnameInp.val(),
+              lastName: LnameInp.val(),
+            }));
+
+            // Redirect to Home.html
+            window.location.href = "../dist/Home.html";
           })
           .catch((error) => {
             alert(error.message);

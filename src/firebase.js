@@ -7,6 +7,7 @@ import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyBmno2mvP8YTKKlBdcBb6pPn3l5cb8pKJA",
   authDomain: "splash-wash-f27d8.firebaseapp.com",
+  databaseurl: "https://splash-wash-f27d8-default-rtdb.firebaseio.com/",
   projectId: "splash-wash-f27d8",
   storageBucket: "splash-wash-f27d8.appspot.com",
   messagingSenderId: "1072800525434",
