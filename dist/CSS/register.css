@@ -74,6 +74,15 @@
 .many-user-wrap {
     display: flex;
     margin-top: 12px;
+    gap: 10px;
+}
+.many-user-wrap p {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.image-list img {
+    height: 35px;
 }
 
 .register {
