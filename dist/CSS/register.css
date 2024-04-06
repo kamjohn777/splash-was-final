@@ -71,6 +71,11 @@
     margin-bottom: 15px;
 }
 
+.many-user-wrap {
+    display: flex;
+    margin-top: 12px;
+}
+
 .register {
     display: flex;
     flex-direction: column;
