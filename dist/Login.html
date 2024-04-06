@@ -3,24 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/login.css">
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css" rel="stylesheet"> -->
     <title>Login</title>
   </head>
   <body>
-    <h2>Login page</h2>
+    <div class="login_main_container">
+      <div class="left-container">
+        <!-- Background shapes -->
+        <div id="image-shape-div">
+          <div class="left-img-shape">
+            <img src="./assets/Shape.png" alt="" />
+          </div>
 
-    <form class="register">
+          <div class="right-img-shape">
+            <img src="./assets/Shape (1).png" alt="" />
+          </div>
+        </div>
+        <!-- end of background shapes -->
+        <div class="left-content-wrap">
+          <div class="logo-wrap">
+            <div class="logo-img-wrap">
+              <img
+                src="./assets/Screenshot_20240402-031706__01__01 2.png"
+                alt="logo"
+              />
+            </div>
+            <h2>Splash Wash</h2>
+          </div>
+          <div class="rectangle-wrap">
+            <img src="./assets/Rectangle 3.png" alt="" />
+          </div>
+          <div class="greeting-wrap">
+            <h3 class="greeting-h3">
+              Welcome to the <br />
+              Splash Wash
+            </h3>
+            <p>Our car wash service is designed to give your</p>
+            <p>vehicle the ultimate clean and shine it deserves</p>
+          </div>
+          <div class="many-user-wrap">
+            <div class="image-list">
+              <!-- user images will go here -->
+              <img src="./assets/many-users-img.png" alt="" />
+            </div>
+            <p>
+              More then <span style="color: #89cff0">170K+</span> people
+              <br />used our service
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+     <!-- right container -->
+     <div class="right-container">
+      <form class="register">
         <h2>Login page</h2>
               <label for="email">Email:</label>
       <input type="text" name="email" id="emailInp" required />
       <label for="password">Password:</label>
       <input type="password" name="password" id="passwordInp" required />
 
-      <button type="submit" class="btn btn-primary">Login</button>
-      <a href="../dist/Register.html">
-        <button type="button" class="btn btn-primary">Sign Up</button>
-      </a>
+    
+    <div class="btn-wrap">
+      <button type="submit" class="btn btn-primary">Create New user</button>
+    <a class="a-btn" href="../dist/Register.html">
+      <button type="button" class="btn btn-primary">Sign in</button>
+    </a>
+    </div>
+
+
+
+
+      <div class="or-continue-div">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+        <p>Or continue with</p>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+      </div>
+
+
+      <div class="auth-by-emails-wrap">
+        <div class="google-auth">
+          <img class="auth-img google" src="./assets/Logo.png" alt="">
+          <p class="para-auth">Log in with Google</p>
+        </div>
+
+        <div class="facebook-auth">
+          <img class="auth-img facebook" src="./assets/Logo-facebook.png" alt="">
+          <p class="para-auth">Log in with Facebook</p>
+        </div>
+      </div>
     </form>
+     </div>
+    </div>
+
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./bundle.js"></script>
@@ -106,6 +228,23 @@
             console.log(error.code)
           });
       };
+
+
+      $(".greeting-wrap")
+        .find("*")
+        .css({ width: "fit-content", color: "white" });
+      $(".greeting-wrap")
+        .find("p")
+        .css({ "margin-bottom": "5px", "font-size": "14px" });
+      $(".many-user-wrap")
+        .find("*:not(span)")
+        .css({ width: "fit-content", color: "white" });
+      $(".register")
+        .find("input")
+        .addClass("input-focus");
+      $(".register").find("label").css("font-weight", "600");
+      $(".or-continue-div").find("div").addClass("circle-divs").css({ background: "#2f2f2f69", height: "2px", width: "2px", borderRadius: "50%" })
+
 
       console.log(LoginUser);
       MainForm.on("submit", LoginUser);
