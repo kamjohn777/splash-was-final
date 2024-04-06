@@ -105,8 +105,66 @@
             <button type="button" class="btn btn-primary">Sign in</button>
           </a>
           </div>
+
+          <div class="or-continue-div">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+            <p>Or continue with</p>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+          </div>
+
+          <div class="auth-by-emails-wrap">
+            <div class="google-auth">
+              <img class="auth-img google" src="./assets/Logo.png" alt="">
+              <p class="para-auth">Log in with Google</p>
+            </div>
+
+            <div class="facebook-auth">
+              <img class="auth-img facebook" src="./assets/Logo-facebook.png" alt="">
+              <p class="para-auth">Log in with Facebook</p>
+            </div>
+          </div>
         </form>
       </div>
+
+
     </div>
 
     <script
@@ -195,6 +253,7 @@
         .find("input")
         .addClass("input-focus");
       $(".register").find("label").css("font-weight", "600");
+      $(".or-continue-div").find("div").addClass("circle-divs").css({ background: "#2f2f2f69", height: "2px", width: "2px", borderRadius: "50%" })
 
       console.log(registerUser);
       MainForm.on("submit", registerUser);

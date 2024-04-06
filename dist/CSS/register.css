@@ -118,11 +118,23 @@
     align-items: center;
     justify-content: center; */
 
-    width: 50%;
+    /* width: 50%;
     height: 80%;
     display: flex;
     align-items: flex-start;
+    justify-content: center; */
+
+
+
+    /* flex-direction: column; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
     justify-content: center;
+    /* flex-direction: column; */
+    /* padding-top: 20px; */
+    padding-top: 5px;
 }
 
 .register {
@@ -191,4 +203,52 @@
     background: linear-gradient(to right, #89CFF0, #3BA6D8);
     border: none;
     border-radius: 5px;
+}
+
+.or-continue-div {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-evenly; */
+    width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.or-continue-div p {
+    margin: 0;
+}
+
+.auth-by-emails-wrap {
+    height: 120px;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.google-auth, .facebook-auth {
+    /* display: flex;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 220px;
+    margin: auto; */
+
+    height: 50px;
+    border: 1px solid #0000001c;
+    border-radius: 25px;
+    width: 220px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.auth-img {
+    height: 25px;
+}
+
+.para-auth {
+    margin: 0;
 }
