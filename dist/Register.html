@@ -21,11 +21,11 @@
         <!-- Background shapes -->
         <div id="image-shape-div">
           <div class="left-img-shape">
-            <img src="./assets/Shape.png" alt="">
+            <img src="./assets/Shape.png" alt="" />
           </div>
 
           <div class="right-img-shape">
-            <img src="./assets/Shape (1).png" alt="">
+            <img src="./assets/Shape (1).png" alt="" />
           </div>
         </div>
         <!-- end of background shapes -->
@@ -53,9 +53,12 @@
           <div class="many-user-wrap">
             <div class="image-list">
               <!-- user images will go here -->
-              <img src="./assets/many-users-img.png" alt="">
+              <img src="./assets/many-users-img.png" alt="" />
             </div>
-            <p>More then <span style="color: #89CFF0;">170K+</span> people <br />used our service</p>
+            <p>
+              More then <span style="color: #89cff0">170K+</span> people
+              <br />used our service
+            </p>
           </div>
         </div>
       </div>
@@ -64,17 +67,40 @@
       <div class="right-container">
         <form class="register">
           <h3>Register User</h3>
-          <label for="email">Email:</label>
-          <input type="text" name="email" id="emailInp" required />
+          <p>To proceed kindly provide the required details below</p>
+          <label for="email">Email Address:</label>
+          <input
+            placeholder="Enter email here"
+            type="text"
+            name="email"
+            id="emailInp"
+            required
+          />
           <label for="password">Password:</label>
-          <input type="password" name="password" id="passwordInp" required />
+          <input
+            placeholder="Enter password here"
+            type="password"
+            name="password"
+            id="passwordInp"
+            required
+          />
           <label for="firstName">First Name:</label>
-          <input type="text" name="firstName" id="fnameInput" />
+          <input
+            placeholder="Enter first name here"
+            type="text"
+            name="firstName"
+            id="fnameInput"
+          />
           <label for="lastName">Last Name:</label>
-          <input type="text" name="lastName" id="lnameInput" />
+          <input
+            placeholder="Enter lsat name here"
+            type="text"
+            name="lastName"
+            id="lnameInput"
+          />
 
           <button type="submit" class="btn btn-primary">Create New user</button>
-          <a href="../dist/Login.html">
+          <a class="a-btn" href="../dist/Login.html">
             <button type="button" class="btn btn-primary">Sign in</button>
           </a>
         </form>
@@ -163,6 +189,10 @@
       $(".many-user-wrap")
         .find("*:not(span)")
         .css({ width: "fit-content", color: "white" });
+      $(".register")
+        .find("input")
+        .addClass("input-focus");
+      $(".register").find("label").css("font-weight", "600");
 
       console.log(registerUser);
       MainForm.on("submit", registerUser);

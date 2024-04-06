@@ -11,6 +11,7 @@
     background-color: #f1f1f1;
 }
 
+/* start of left container */
 .left-container {
     width: 50%;
     margin: 0;
@@ -108,3 +109,60 @@
     flex-direction: column;
 }
 
+/* end of left container */
+
+/* start of right container */
+.right-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24rem;
+    /* height: 415px; */
+    height: fit-content;
+    gap: 5px;
+}
+
+.register h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.register input {
+    user-select: text;
+    border: 0.5px solid #8080803b;
+    /* border: rgba(109, 109, 109, 0.753); */
+    height: 34px;
+    /* background: red; */
+    /* padding: 0px; */
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #00000050;
+}
+
+
+
+.input-focus:focus {
+    /* outline: 0.5px solid #4a90e2; */
+    outline: none;
+    box-shadow: 0 0 7px #4A90E2; /* Change this to your preferred color */
+}
+
+.input-focus::placeholder {
+    color: grey;
+}
+
+.btn-primary {
+    margin-top: 20px;
+}
+
+.a-btn, .a-btn button {
+    width: 384px;
+    margin-top: 5px;
+}
