@@ -18,6 +18,17 @@
   <body>
     <div class="main_container">
       <div class="left-container">
+        <!-- Background shapes -->
+        <div id="image-shape-div">
+          <div class="left-img-shape">
+            <img src="./assets/Shape.png" alt="">
+          </div>
+
+          <div class="right-img-shape">
+            <img src="./assets/Shape (1).png" alt="">
+          </div>
+        </div>
+        <!-- end of background shapes -->
         <div class="left-content-wrap">
           <div class="logo-wrap">
             <div class="logo-img-wrap">
@@ -44,7 +55,7 @@
               <!-- user images will go here -->
               <img src="./assets/many-users-img.png" alt="">
             </div>
-            <p>More then <span>170K+</span> people <br />used our service</p>
+            <p>More then <span style="color: #89CFF0;">170K+</span> people <br />used our service</p>
           </div>
         </div>
       </div>
@@ -149,7 +160,7 @@
         .find("p")
         .css({ "margin-bottom": "5px", "font-size": "14px" });
       $(".many-user-wrap")
-        .find("*")
+        .find("*:not(span)")
         .css({ width: "fit-content", color: "white" });
 
       console.log(registerUser);

@@ -34,6 +34,23 @@
     height: 60%;
 }
 
+#image-shape-div {
+    display: flex;
+}
+
+.left-img-shape {
+    height: 112px;
+    position: absolute;
+    left: -6%;
+    top: -2%;
+}
+
+.right-img-shape {
+    height: 70px;
+    position: absolute;
+    top: 0%;
+}
+
 .logo-img-wrap img{
     height: 70px;
     border-radius: 50%;
