@@ -184,7 +184,7 @@ nav {
     border-radius: 15px; */
 
     position: absolute;
-    top: 75%;
+    top: 68%;
     left: 50%;
     transform: translateX(-50%);
     background: red;
