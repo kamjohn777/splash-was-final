@@ -175,3 +175,20 @@ nav {
     /* margin: auto; */
  }
 /* End of overlap content */
+
+/* Group sec offers wrap */
+.group-sec-offers-wrap {
+    /* background: red;
+    width: 70%;
+    margin: auto;
+    border-radius: 15px; */
+
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    width: 70%;
+    border-radius: 15px;
+}
+/* End of group sec offers wrap */
