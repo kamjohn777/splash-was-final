@@ -43,6 +43,13 @@ nav {
     transform-origin: left;
 }
 
+.logout {
+    height: 35px;
+    width: 75px;
+    border-radius: 5px;
+    border: 2px solid lightblue;
+}
+
 #section-img {
     /* background-image: url("../assets/homepage-video.png"); */
     /* background-repeat: no-repeat;
@@ -50,6 +57,13 @@ nav {
     background-position: center; */
     height: 500px; /* Adjust as needed */
     position: relative; /* Adjust as needed */
+}
+
+.overlap-sec-div {
+    position: absolute; /* Position the div absolutely within the image section */
+    top: 50%; /* Adjust these values as needed */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the div */
 }
 
 .video-wrapper {
@@ -83,3 +97,81 @@ nav {
     height: 100%;
     background: rgba(0, 0, 0, 0.5); 
 } */
+
+/* Overlap content */
+.overlap-sec-div {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 340px;
+    background: red;
+    justify-content: space-evenly; */
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 340px;
+    background: red;
+    justify-content: center;
+    gap: 5px; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 260px;
+    justify-content: space-evenly;
+    gap: 5px;
+    margin: auto;
+}
+
+.simple-wash-div {
+    display: flex;
+    color: lightblue;
+    width: 280px;
+    /* background: red; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.simple-wash-div img {
+    height: 20px;
+    width: 20px;
+}
+
+.simple-wash-div p {margin: 0;}
+
+.refresh-div {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.refresh-div h2 {
+    margin: 0;
+}
+
+.overlap-para {
+    color: white;
+    width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 63px;
+}
+
+.overlap-para p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+ .overlap-btn{
+    width: fit-content;
+    /* background: red; */
+    /* text-align: center; */
+    /* margin: auto; */
+ }
+/* End of overlap content */

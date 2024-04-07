@@ -23,8 +23,9 @@
         </div>
 
         <div class="nav-div3">
-            <button class="logout">Logout</button>
-            <button class="btn btn-outline-success" type="button" id="signOutBtn">Sign Out</button>
+
+            <button class="logout">Sign Up</button>
+            <button class="btn btn-outline-success" type="button" id="signOutBtn">Logout</button>
         </div>
     </nav>
 
@@ -36,6 +37,25 @@
             </video>
         </div>
     </section>
+
+    <div class="overlap-sec-div">
+        <div class="simple-wash-div">
+            <img src="./assets/Play-icon.png" alt="">
+            <p>SIMPLE WASHING PLATFORM</p>
+        </div>
+        <div class="refresh-div">
+            <h2>Refresh Your Vehicle With</h2>
+            <h2>Our Wash Service</h2>
+        </div>
+        <div class="overlap-para">
+            <p>Whether you need a quick exterior was or a comprehensive detailing package, our car</p>
+            <p>Wash service is tailored to meet your specific needs. Sit back, relax, and let us take care of</p>
+            <p>your car while you enjoy the results of our professional touch</p>
+        </div>
+        <div class="overlap-btn">
+            <a href="./Bookings.html"><button>Book Online</button></a>
+        </div>
+    </div>
 
         <!-- <img src="./assets/6872068-uhd_3840_2160_25fps.mp4" alt="">
         <img src="./assets/6872474-uhd_2160_3840_25fps.mp4" alt="">
@@ -58,33 +78,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./bundle.js"></script>
     <script>
-        let userCreds = JSON.parse(localStorage.getItem("user-cred"));
-        let userInfo = JSON.parse(localStorage.getItem("user-info"));
+        $(document).ready(function() {
+    let userCreds = JSON.parse(localStorage.getItem("user-cred"));
+    let userInfo = JSON.parse(localStorage.getItem("user-info"));
+    let SignOutBtn = $("#signOutBtn");
+    let SignUpBtn = $(".logout");
 
-        let MsgHead = $("#msg");
-        let GreetHead = $("#greet");
-        let SignOutBtn = $("#signOutBtn");
+    let SignOut = () => {
+        sessionStorage.removeItem("user-creds");
+        sessionStorage.removeItem("user-info");
+        window.location.href = "../dist/Login.html";
+    }
 
-        // MsgHead.innerText = `user with email ${userCreds.email} is logged in`;
-        // GreetHead.innerText = `Welcome ${userInfo.firstName} ${userInfo.lastName}`;
-
-        let SignOut = () => {
-            sessionStorage.removeItem("user-creds");
-            sessionStorage.removeItem("user-info");
-            window.location.href = "../dist/Login.html";
+    let CheckCred = () => {
+        if (userCreds) {
+            SignOutBtn.text("Logout");
+            SignOutBtn.click(SignOut);
+            SignUpBtn.text("Profile"); // Change the text to "Profile" if user is logged in
+            SignUpBtn.click(() => window.location.href = "../dist/Register.html"); // Redirect to Profile page when button is clicked
+        } else {
+            SignOutBtn.text("Login");
+            SignOutBtn.click(() => window.location.href = "../dist/Login.html");
+            SignUpBtn.text("Sign Up");
+            SignUpBtn.click(() => window.location.href = "../dist/Register.html"); // Redirect to Register page when Sign Up button is clicked
         }
+    }
 
-        let CheckCred = () => {
-            if (sessionStorage.getItem("user-creds"))
-            window.location.href = "../dist/Login.html"
-
-            else {
-                if (userCreds) {
-            MsgHead.innerText = `user with email ${userCreds.email} is logged in`;
-            GreetHead.innerText = `Welcome ${userInfo.firstName} ${userInfo.lastName}`;
-        }
-            }
-        }
+    window.addEventListener("load", CheckCred);
+});
 
 
         let videos = [

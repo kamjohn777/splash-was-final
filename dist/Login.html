@@ -148,19 +148,16 @@
     <script src="./bundle.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script> -->
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-      import {
-        getAuth,
-        signInWithEmailAndPassword
-      } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
-      import {
-        getDatabase,
-        get,
-        ref,
-        child
-      } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
-      import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
+import {
+  getDatabase,
+  ref,
+  child,
+  get
+} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
       const firebaseConfig = {
   apiKey: "AIzaSyBmno2mvP8YTKKlBdcBb6pPn3l5cb8pKJA",
   authDomain: "splash-wash-f27d8.firebaseapp.com",
@@ -173,7 +170,7 @@
 
       const app = initializeApp(firebaseConfig);
     //   const db = getDatabase(app);
-      const auth = getAuth(app);
+      const auth = getAuth();
       const db = getFirestore(app);
     //   const dbref = ref(db, "users", credential.user.uid);
 
@@ -192,43 +189,48 @@
   console.log("Error getting document:", error);
 });
 
-      let LoginUser = (event) => {
-        event.preventDefault();
+    //  test
+    let LoginUser = (event) => {
+    event.preventDefault();
 
-        signInWithEmailAndPassword(auth, EmailInp.val(), PassInp.val())
-          .then((credential) => {
+    // Get the email and password from the input fields
+    let email = EmailInp.val();
+    let password = PassInp.val();
+
+    signInWithEmailAndPassword(auth, email, password)
+        .then((credential) => {
             console.log('User credentials', credential)
-            const dbref = ref(db, "users", credential.user.uid);
-            get(child(dbref, `usersAuthList/${credential.user.uid}`))
-              .then((snapshot) => {
-                console.log('snapshot', snapshot.val());
-                if (snapshot.exists()) {
-                  alert("User logged in");
-                  sessionStorage.setItem("user-info", JSON.stringify({
-                    firstname: snapshot.val().firstname,
-                    lastname: snapshot.val().lastname 
-                }));
-                sessionStorage.setItem("user-creds", JSON.stringify({
-                    email: EmailInp.val(),
-                    password: PassInp.val()}));
-                  window.location.href = "../dist/Home.html";
-                } else {
-                  alert("User not found");
-                }
-              })
-              .catch((error) => {
-                alert(error.message);
-                console.log(error.message);
-                console.log(error.code);
-              });
-          })
-          .catch((error) => {
+            const docRef = doc(db, "users", credential.user.uid);
+            getDoc(docRef)
+                .then((docSnapshot) => {
+                    if (docSnapshot.exists()) {
+                        alert("User logged in");
+                        sessionStorage.setItem("user-info", JSON.stringify({
+                            firstname: docSnapshot.data().firstname,
+                            lastname: docSnapshot.data().lastname 
+                        }));
+                        sessionStorage.setItem("user-creds", JSON.stringify({
+                            email: email,
+                            password: password
+                        }));
+                        window.location.href = "../dist/Home.html";
+                    } else {
+                        alert("User not found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error.message);
+                    console.log(error.message);
+                    console.log(error.code);
+                });
+        })
+        .catch((error) => {
             alert(error.message);
             console.log(error.message);
             console.log(error.code)
-          });
-      };
-
+        });
+};
+    // end of test
 
       $(".greeting-wrap")
         .find("*")
