@@ -30,10 +30,12 @@
 
     <!-- image section -->
     <section id="section-img">
-        <!-- dynamic videos -->
-        <video autoplay loop muted>
-            <source id="video-source" src="./assets/6872068-uhd_3840_2160_25fps.mp4" type="video/mp4">
-        </video>
+        <div class="video-wrapper">
+            <video autoplay loop muted>
+                <source id="video-source" src="./assets/6872068-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
 
         <!-- <img src="./assets/6872068-uhd_3840_2160_25fps.mp4" alt="">
         <img src="./assets/6872474-uhd_2160_3840_25fps.mp4" alt="">
@@ -84,24 +86,32 @@
             }
         }
 
+
         let videos = [
-    'url("./assets/6872068-uhd_3840_2160_25fps.mp4")',
-    'url("./assets/6872474-uhd_2160_3840_25fps.mp4")',
-    'url("./assets/6873328-uhd_2160_3840_25fps.mp4")',
-    'url("./assets/6873496-uhd_2160_3840_25fps.mp4")'
+    "./assets/6872068-uhd_3840_2160_25fps.mp4",
+    "./assets/6872474-uhd_2160_3840_25fps.mp4",
+    "./assets/6873328-uhd_2160_3840_25fps.mp4",
+    "./assets/6873496-uhd_2160_3840_25fps.mp4"
+    // "./assets/12370189-hd_720_1280_30fps.mp4"
 ];
-
-// function changeVideo() {
-//     let $section = $('#section-img');
-//     let randomVideo = videos[Math.floor(Math.random() * videos.length)];
-//     $section.css('background-image', randomVideo);
-// }
-
+ 
 function changeVideo() {
+    let $video = $('video');
     let $videoSource = $('#video-source');
     let randomVideo = videos[Math.floor(Math.random() * videos.length)];
+    console.log("Random video selected: ", randomVideo); // Log the selected video
     $videoSource.attr('src', randomVideo);
+    $video[0].load(); // Load the new source
+    $video[0].play(); // Play the video
 }
+
+
+$(document).ready(function() {
+    changeVideo();
+    // Add event listener for 'ended' event on the video
+    $('video')[0].addEventListener('ended', changeVideo);
+});
+
 
         window.addEventListener("load", CheckCred);
         SignOutBtn.click(SignOut);
