@@ -61,9 +61,16 @@ nav {
 
 .overlap-sec-div {
     position: absolute; /* Position the div absolutely within the image section */
-    top: 50%; /* Adjust these values as needed */
+    top: 40%; /* Adjust these values as needed */
     left: 50%;
     transform: translate(-50%, -50%); /* Center the div */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 260px;
+    justify-content: space-evenly;
+    gap: 5px;
+    margin: auto;
 }
 
 .video-wrapper {
@@ -99,7 +106,7 @@ nav {
 } */
 
 /* Overlap content */
-.overlap-sec-div {
+/* .overlap-sec-div { */
     /* display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,14 +122,14 @@ nav {
     justify-content: center;
     gap: 5px; */
 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     height: 260px;
     justify-content: space-evenly;
     gap: 5px;
-    margin: auto;
-}
+    margin: auto; */
+/* } */
 
 .simple-wash-div {
     display: flex;
@@ -182,13 +189,89 @@ nav {
     width: 70%;
     margin: auto;
     border-radius: 15px; */
-
+    display: flex;
     position: absolute;
     top: 68%;
     left: 50%;
     transform: translateX(-50%);
-    background: red;
+    background: #fff;
     width: 70%;
+    height: 150px;
     border-radius: 15px;
+    justify-content: space-evenly;
+    box-shadow: 1px 2px 12px #0000004d;
+    align-items: center;
 }
+
+.gsow-img-wrap {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 10px;
+}
+
+.gsow-img-div1 {
+    height: 70px;
+    width: 70px;
+    background: #f0d2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.gsow-img-div2 {
+    height: 70px;
+    width: 70px;
+    background: #d2ffd3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.gsow-img-div3 {
+    height: 70px;
+    width: 70px;
+    background: #d2e5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.gsow-img-div4 {
+    height: 70px;
+    width: 70px;
+    background: #ffedd2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.gsow-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
+
+.gsow-content h5 {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+.gsow-content p {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+}
+
+.gsow-content h5,p {
+    margin: 0;
+} 
 /* End of group sec offers wrap */
