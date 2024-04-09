@@ -284,6 +284,27 @@ nav {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    justify-content: space-around;
+}
+
+.image-acs-div .first-img {
+        height: 420px;
+        width: 280px;
+        /* border-radius: 32%; */
+        /* border-top-left-radius: 163px;
+        border-top-right-radius: 163px;
+        border-bottom-left-radius: 163px;
+        border-bottom-right-radius: 163px; */
+}
+
+.sub-image-acs-div {
+    position: relative;
+    bottom: 25%;
+    left: 70%;
+}
+
+.second-img {
+    height: 200px;
 }
 
 .acs-cd-txt h2 {
@@ -291,8 +312,54 @@ nav {
 }
 
 .acs-cd-txt p {
-    width: 80%;
-    font-size: 1rem;
+    width: 90%;
+    font-size: 1.4rem;
     line-height: 1.5;
+    color: #525252c7;
 }
+
+.acs-content-div {
+    width: 850px;
+    /* background: purple; */
+}
+
+.acs-cd-title {
+    display: flex;
+    width: 100%;
+    /* background: red; */
+    align-items: center;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+}
+
+.acs-cd-title p {
+    font-size: 1.5rem;
+    color: #032498;
+    font-family: sans-serif;
+}
+
+.acs-cd-title img {
+    width: 75%;
+    height: 1px;
+}
+
+.acs-cd-txt h2 {
+    color: #101130;
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+
+.cw-card img {
+    display: flex;
+    background: radial-gradient(circle, #89CFF0, #3BA6D8);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+/* .acs-cd-title div{
+    background-color: #3BA6D8;
+    height: 2px;
+    width: 8px;
+    border-radius: 50%;
+} */
 /* End of About Company styles */
