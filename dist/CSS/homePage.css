@@ -61,7 +61,7 @@ nav {
 
 .overlap-sec-div {
     position: absolute; /* Position the div absolutely within the image section */
-    top: 40%; /* Adjust these values as needed */
+    top: 30%; /* Adjust these values as needed */
     left: 50%;
     transform: translate(-50%, -50%); /* Center the div */
     display: flex;
@@ -191,7 +191,7 @@ nav {
     border-radius: 15px; */
     display: flex;
     position: absolute;
-    top: 68%;
+    top: 52%;
     left: 50%;
     transform: translateX(-50%);
     background: #fff;
