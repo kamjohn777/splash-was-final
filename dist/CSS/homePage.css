@@ -237,13 +237,24 @@ nav {
     margin-left: auto;
     margin-right: auto;
     justify-content: space-around; */
-    margin-top: 280px;
+
+
+    /* margin-top: 280px;
     display: flex;
     width: 80%;
     height: 660px;
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-around;
+    justify-content: space-around; */
+
+
+    margin-top: 280px;
+    display: flex;
+    width: 100%;
+    height: 660px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
 }
 
 .location-div {
@@ -377,3 +388,58 @@ nav {
     font-family: sans-serif;
 }
 /* End of About Company styles */
+
+/* Our Services style code */
+#our_service_sec {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+
+}
+
+.sub-our-sevice {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 450px;
+}
+
+.service-sec-circles {
+    height: 2px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #032498;
+}
+
+.sos-h3-wrap h3 {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #032498;
+    margin: 0;
+}
+
+.ours-title-wrap h2 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.service-card-wrap {
+    display: flex;
+    width: 100%;
+    background: orange;
+    margin-top: 81px;
+    justify-content: space-around;
+}
+
+.service-card {
+    height: 400px;
+    width: 400px;
+    background-color: lightblue;
+    border-radius: 40px;
+}
+/* End of our services style code */
