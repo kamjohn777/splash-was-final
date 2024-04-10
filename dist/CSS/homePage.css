@@ -455,6 +455,7 @@ nav {
     justify-content: center;
     gap: 25px;
     padding: 12px;
+    box-shadow: 1PX 1PX 10PX rgba(0, 0, 0, 0.267);
 }
 
 
