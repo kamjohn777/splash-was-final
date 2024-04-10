@@ -396,8 +396,6 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: yellow;
-
 }
 
 .sub-our-sevice {
@@ -431,15 +429,64 @@ nav {
 .service-card-wrap {
     display: flex;
     width: 100%;
-    background: orange;
     margin-top: 81px;
     justify-content: space-around;
+}
+
+#ser-card-white {
+    height: 380px;
+    width: 370px;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px;
 }
 
 .service-card {
     height: 380px;
     width: 370px;
-    background-color: lightblue;
+    background-color: #e0f7ff;
     border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px;
+}
+
+
+.sc-img-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#lightblue-h2 {
+    color: #c3ecfa;
+}
+.sc-ser-title-wrap h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-family: sans-serif;
+}
+
+.sc-img-div img {
+    height: 100px;
+    width: 100px;
+}
+
+.sc-img-div h2 {
+    margin: 0;
+    font-size: 5rem;
+    font-family: sans-serif;
+    color: #F0FBFF;
+}
+
+.sc-ser-p-wrap p {
+    line-height: 1.5;
+    font-size: 1.4rem;
+    color: #42526B;
 }
 /* End of our services style code */
