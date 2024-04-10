@@ -437,8 +437,8 @@ nav {
 }
 
 .service-card {
-    height: 400px;
-    width: 400px;
+    height: 380px;
+    width: 370px;
     background-color: lightblue;
     border-radius: 40px;
 }
