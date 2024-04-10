@@ -434,8 +434,10 @@ nav {
 }
 
 #ser-card-white {
-    height: 380px;
-    width: 370px;
+    /* height: 380px;
+    width: 370px; */
+    height: 40%;
+    width: 22%;
     background-color: white;
     border-radius: 40px;
     display: flex;
@@ -446,8 +448,10 @@ nav {
 }
 
 .service-card {
-    height: 380px;
-    width: 370px;
+    /* height: 380px;
+    width: 370px; */
+    height: 40%;
+    width: 22%;
     background-color: #e0f7ff;
     border-radius: 40px;
     display: flex;
@@ -469,25 +473,60 @@ nav {
 }
 .sc-ser-title-wrap h2 {
     margin: 0;
-    font-size: 2.2rem;
+    /* font-size: 2.2rem; */
+    font-size: 1.6rem;
     font-family: sans-serif;
 }
 
 .sc-img-div img {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
 }
 
 .sc-img-div h2 {
     margin: 0;
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: sans-serif;
     color: #F0FBFF;
 }
 
 .sc-ser-p-wrap p {
     line-height: 1.5;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
+    font-size: 1.2rem;
     color: #42526B;
 }
 /* End of our services style code */
+
+
+/* Some of Our Features section styles */
+#some-of-our-features {
+    margin-top: 160px;
+}
+
+.soos-sub-wrap {
+    background: lightblue;
+    width: 90%;
+    margin: auto;
+}
+
+.title-circle-wrap {
+    display: flex;
+    align-items: center;
+    background: red;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.title-circle-wrap h3 {
+    color: #032498;
+    font-family: sans-serif;
+}
+
+.title-circle-wrap div{
+    height: 2px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #032498;
+}
+/* End of some of our features section */
