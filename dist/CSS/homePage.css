@@ -43,11 +43,29 @@ nav {
     transform-origin: left;
 }
 
+.nav-div3 {
+    width: 200px;
+    /* background: red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .logout {
     height: 35px;
     width: 75px;
     border-radius: 5px;
     border: 2px solid lightblue;
+    background: transparent;
+    color: #89CFF0;
+}
+
+.btn-outline-success {
+    height: 35px;
+    width: 75px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to right, #3BA6D8, #89CFF0);
+    color: white;
 }
 
 #section-img {
