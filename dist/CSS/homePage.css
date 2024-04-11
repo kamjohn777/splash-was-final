@@ -677,6 +677,9 @@ nav {
     width: 100%;
     margin-top: 90px;
     background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .wps-title-wrap {
@@ -709,10 +712,22 @@ nav {
 }
 
 .process-card-wrap {
-    width: fit-content;
+    /* width: fit-content;
     background: purple;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+
+    width: fit-content;
+    height: 390px;
+    /* height: 345px; */
+    /* background: purple; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .wps-sec-circles {
@@ -728,5 +743,63 @@ nav {
     justify-content: center;
     width: 100%;
     align-items: center;
+}
+
+.wps-card-wrap {
+    display: flex;
+    width: 100%;
+    background: orange;
+}
+
+.wps-card {
+    position: relative;
+    height: 100%;
+    background: navajowhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.wps-card-img img{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wps-card-txt {
+    /* height: 280px; */
+    height: 250px;
+    width: 420px;
+    /* background: pink; */
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.wps-card-txt h4 {
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: black;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.wps-card-txt p {
+        /* display: flex; */
+    /* flex-direction: column; */
+    text-align: center;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: rgb(154, 168, 182);
+    /* margin-top: -8px; */
+    width: 285px;
+    line-height: 2;
+    margin-bottom: 18px;
 }
 /* End of  work Process section */
