@@ -946,4 +946,12 @@ nav {
 .card p {
     color: lightgrey;
 }
+
+.left {
+    margin-left: 34px;
+}
+
+.right {
+    margin-right: 34px;
+}
 /* End of Frequently Asked Questions */
