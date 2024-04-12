@@ -955,11 +955,11 @@ nav {
     color: lightgrey;
 }
 
-.left {
+.left-c {
     margin-left: 34px;
 }
 
-.right {
+.right-c {
     margin-right: 34px;
 }
 /* End of Frequently Asked Questions */
@@ -996,5 +996,115 @@ nav {
     font-size: 3rem;
     margin: 0;
     font-family: sans-serif;
+}
+
+.blog-card-wrap {
+  /*  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    gap: 18px;
+    margin-top: 50px; */
+
+    /*position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    gap: 18px;
+    margin-top: 50px;*/
+
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    /*width: 80%;*/ 
+    width: 85%;
+    gap: 18px;
+    margin-top: 50px;
+}
+
+.bcw-card-item {
+    flex: 0 0 calc(33.3333% - 36px); /* 33.3333% for 3 items and 36px for the gap */
+}
+
+.card-item-txt-wrap :nth-child(1) {
+    margin-top: 15px;
+    color: #032498;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.card-item-txt-wrap h5 {
+    margin: 15px 0px;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.card-item-txt-wrap :nth-child(3) {
+    font-family: sans-serif;
+    color: #646464;
+    line-height: 1.5;
+}
+
+.card-item-txt-wrap :nth-child(4) {
+    margin-top: 10px;
+    color: #006de1;
+    font-family: sans-serif;
+}
+
+
+
+.slide-button {
+    /*position: absolute;*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: yellow;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#slide-left {
+    left: 10px;
+}
+
+#slide-right {
+    right: 10px;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.obs-button-div {
+    margin-top: 100px;
+    width: 200px;
+    display: flex;
+    background: red;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gradient-background {
+    background: linear-gradient(to right, lightblue, white);
 }
 /* End of Our Blog Section */

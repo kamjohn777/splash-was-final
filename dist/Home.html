@@ -841,27 +841,27 @@
   </div>
 
   <div class="faqs-cards-wrap">
-    <div class="left card">
+    <div class="left-c card">
         <h3><strong>Title</strong></h3>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
-    <div class="right card">
+    <div class="right-c card">
         <h3><strong>Title</strong></h3>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
-    <div class="left card">
+    <div class="left-c card">
         <h3><strong>Title</strong></h3>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
-    <div class="right card">
+    <div class="right-c card">
         <h3><strong>Title</strong></h3>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
-    <div class="left card">
+    <div class="left-c card">
         <h3><strong>Title</strong></h3>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
-    <div class="right card">
+    <div class="right-c card">
         <h3><strong>Title</strong></h3>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
@@ -908,17 +908,88 @@
   <div class="blog-card-wrap">
     <div class="bcw-card-item">
       <div class="card-item-img">
-        <img src="./assets/cleaning-image-2.png" alt="">
+        <img src="./assets/Frame-53.png" alt="">
       </div>
       <div class="card-item-txt-wrap">
         <p>Auto Card</p>
         <h5>Preparing your Car for the winter and Holidays</h5>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo amet tempora recusandae molestias ipsa repellat saepe ut esse. Fugit pariatur hic nemo laborum corrupti molestiae!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facilis officia vero harum </p>
+        <p>23 Oct, 2023</p>
+      </div>
+    </div>
+
+    <div class="bcw-card-item">
+      <div class="card-item-img">
+        <img src="./assets/Frame-53(1).png" alt="">
+      </div>
+      <div class="card-item-txt-wrap">
+        <p>Car Washing</p>
+        <h5>The Importance of Washing Under Vehicle Surface</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, perspiciatis? Ea perferendis ab odit sint incidunt.</p>
+        <p>23 Oct, 2023</p>
+      </div>
+    </div>
+
+    <div class="bcw-card-item">
+      <div class="card-item-img">
+        <img src="./assets/Frame-53(2).png" alt="">
+      </div>
+      <div class="card-item-txt-wrap">
+        <p>News and Tips</p>
+        <h5>Tough Stains in Your Car's Interior (What to do about them)</h5>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nostrum numquam ipsum officia odit! Repudiandae, labore?</p>
+        <p>23 Oct, 2023</p>
+      </div>
+    </div>
+
+    <div class="bcw-card-item">
+      <div class="card-item-img">
+        <img src="./assets/Frame-53(2).png" alt="">
+      </div>
+      <div class="card-item-txt-wrap">
+        <p>News and Tips</p>
+        <h5>Tough Stains in Your Car's Interior (What to do about them)</h5>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nostrum numquam ipsum officia odit! Repudiandae, labore?</p>
+        <p>23 Oct, 2023</p>
+      </div>
+    </div>
+
+
+    <div class="bcw-card-item">
+      <div class="card-item-img">
+        <img src="./assets/Frame-53(2).png" alt="">
+      </div>
+      <div class="card-item-txt-wrap">
+        <p>News and Tips</p>
+        <h5>Tough Stains in Your Car's Interior (What to do about them)</h5>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nostrum numquam ipsum officia odit! Repudiandae, labore?</p>
+        <p>23 Oct, 2023</p>
+      </div>
+    </div>
+
+
+
+    <div class="bcw-card-item">
+      <div class="card-item-img">
+        <img src="./assets/Frame-53(2).png" alt="">
+      </div>
+      <div class="card-item-txt-wrap">
+        <p>News and Tips</p>
+        <h5>Tough Stains in Your Car's Interior (What to do about them)</h5>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nostrum numquam ipsum officia odit! Repudiandae, labore?</p>
         <p>23 Oct, 2023</p>
       </div>
     </div>
   </div>
+
+    
+  <div class="obs-button-div">
+    <button id="slide-left" class="slide-button"><i class="arrow left"></i></button>
+    <button id="slide-right" class="slide-button"><i class="arrow right"></i></button>
+  </div>
 </section>
+
+
 <!-- End of our blog section -->
 
     <!-- <li>
@@ -987,6 +1058,27 @@
         $("video")[0].addEventListener("ended", changeVideo);
       });
 
+
+      $(document).ready(function() {
+    let scrollAmount = 1500; // Set the scroll amount
+
+    $('#slide-left, #slide-right').click(function() {
+        $('#slide-left, #slide-right').removeClass('gradient-background');
+        $(this).addClass('gradient-background');
+    });
+
+    $('#slide-left').click(function() {
+        $('.blog-card-wrap').animate({
+            scrollLeft: '-=' + scrollAmount
+        }, 'slow');
+    });
+
+    $('#slide-right').click(function() {
+        $('.blog-card-wrap').animate({
+            scrollLeft: '+=' + scrollAmount
+        }, 'slow');
+    });
+});
       // $(document).ready(function() {
       //     $('.acs-cd-txt h2, .acs-cd-txt p').each(function() {
       //         $(this).css('width', 'fit-content');
