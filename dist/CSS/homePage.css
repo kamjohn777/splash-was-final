@@ -1111,6 +1111,6 @@ nav {
 }
 
 .gradient-background {
-    background: linear-gradient(to right, lightblue, white);
+    background: radial-gradient(circle, #d7e1e6, #80d6ff);
 }
 /* End of Our Blog Section */
