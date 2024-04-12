@@ -941,6 +941,8 @@ nav {
 }
 
 .card:hover {
+    /* transform: scale(100.4px); */
+    /* transform: scale(1); */
     transform: scale(1);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
 }
@@ -961,3 +963,38 @@ nav {
     margin-right: 34px;
 }
 /* End of Frequently Asked Questions */
+
+/* Our Blog Styles */
+#our-blog-sec {
+    margin-top: 150px;
+    /* margin-top: 100px; */
+    height: auto;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.ob-sec-circles {
+    height: 2px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #032498;
+    /* background-color: #9ea6c275; */
+    /* background-color: #efefef; */
+}
+
+.ob-title-wrap {
+    /* background: yellow; */
+    margin: auto;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.ob-title-wrap h2 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: sans-serif;
+}
+/* End of Our Blog Section */
