@@ -1114,3 +1114,11 @@ nav {
     background: radial-gradient(circle, #d7e1e6, #80d6ff);
 }
 /* End of Our Blog Section */
+
+/* What People Say Styles */
+#what_people_say_sec {
+    margin-top: 60px;
+    background: lightblue;
+    height: 500px;
+}
+/* End of What People Say Styles */
