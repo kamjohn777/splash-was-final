@@ -1183,6 +1183,7 @@ nav {
 
 /* Contact Us Section */
 #get-in-touch-sec {
+    position: relative;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -1193,6 +1194,8 @@ nav {
 
 .background-img-container {
     position: relative;
+    display: flex;
+    justify-content: flex-end;
     background-image: url(../assets/home-page-img.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -1211,5 +1214,40 @@ nav {
     height: 100%;
     background: linear-gradient(to right, rgb(3 116 233 / 54%), rgba(0, 0, 255, 0.2));
     border-radius: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 445px;
+    height: 370px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #0000002b;
+    position: absolute;
+    top: 30%;
+    left: 58%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.gits-content-txt {
+    position: absolute;
 }
 /* End of Contact Us Section */
