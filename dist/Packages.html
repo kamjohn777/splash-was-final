@@ -1,112 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/packages.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/packages.css" />
     <title>Bookings</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- nav section -->
     <nav>
-        <div class="nav-div1">
-          <img src="./assets/splash-homepage-logo.png" alt="" />
-        </div>
-  
-        <div class="nav-div2">
-          <ul>
-            <li><a href="./Home.html">Home</a></li>
-            <li><a href="./Packages.html">Packages</a></li>
-            <li><a href="./Bookings.html">Booking</a></li>
-            <li><a href="./Contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-  
-        <div class="nav-div3">
-          <button class="logout">Sign Up</button>
-          <button class="btn btn-outline-success" type="button" id="signOutBtn">
-            Logout
-          </button>
-        </div>
-      </nav>
-      <!-- End of nav section -->
+      <div class="nav-div1">
+        <img src="./assets/splash-homepage-logo.png" alt="" />
+      </div>
 
-       <!-- image section -->
+      <div class="nav-div2">
+        <ul>
+          <li><a href="./Home.html">Home</a></li>
+          <li><a href="./Packages.html">Packages</a></li>
+          <li><a href="./Bookings.html">Booking</a></li>
+          <li><a href="./Contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-div3">
+        <button class="logout">Sign Up</button>
+        <button class="btn btn-outline-success" type="button" id="signOutBtn">
+          Logout
+        </button>
+      </div>
+    </nav>
+    <!-- End of nav section -->
+
+    <!-- image section -->
     <section id="section-img">
-        <div class="img-wrapper">
-          <!-- <video autoplay loop muted>
+      <div class="img-wrapper">
+        <!-- <video autoplay loop muted>
             <source
               id="video-source"
               src="./assets/6872068-uhd_3840_2160_25fps.mp4"
               type="video/mp4"
             />
           </video> -->
+      </div>
+    </section>
 
+    <!-- Our Pricing-plans section/size car cards -->
+    <section id="pricing_plans_sec">
+      <div class="sub-faqs-wrap">
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+
+        <div class="sos-h3-wrap">
+          <h3>Pricing Plans</h3>
         </div>
-      </section>
 
-      <!-- Our Pricing-plans section/size car cards -->
-      <section id="pricing_plans_sec">
-        <div class="sub-faqs-wrap">
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-        
-            <div class="sos-h3-wrap">
-              <h3>Pricing Plans</h3>
-            </div>
-        
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-            <div class="ob-sec-circles"></div>
-          </div>
-    
-          <div class="ob-title-wrap">
-            <h2>Our Packages</h2>
-          </div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+        <div class="ob-sec-circles"></div>
+      </div>
 
-          <div class="size-cars-card-wrap">
-            <!-- size cars when we click on them the packages cards change in price -->
-            <div class="size-car">
-                <img src="./assets/Vector.png" alt="">
-                <p>Mid-Size Car</p>
-            </div>
+      <div class="ob-title-wrap">
+        <h2>Our Packages</h2>
+      </div>
 
-            <div class="size-car">
-                <img src="./assets/vector-full-size-suv.png" alt="">
-                <p>Small-Size Car</p>
-            </div>
+      <div class="size-cars-card-wrap">
+        <!-- size cars when we click on them the packages cards change in price -->
+        <div class="size-car" id="mid-size">
+          <img src="./assets/Vector.png" alt="" />
+          <p>Mid-Size Car</p>
+        </div>
 
-            <div class="size-car">
-                <img src="./assets/vector-full-size-suv.png" alt="">
-                <p>Full-Size Car</p>
-            </div>
+        <div class="size-car" id="small-Size">
+          <img src="./assets/vector-full-size-suv.png" alt="" />
+          <p>Small-Size Car</p>
+        </div>
 
-            <div class="size-car">
-                <img src="./assets/vector-truck.png" alt="">
-                <p>Pickup Truck</p>
-            </div>
-          </div>
-      </section>
-      
-      <!-- End of Our Pricing-plans section/size car cards  -->
+        <div class="size-car" id="full-Size">
+          <img src="./assets/vector-full-size-suv.png" alt="" />
+          <p>Full-Size Car</p>
+        </div>
 
-      <!-- Pricing Cards section -->
+        <div class="size-car" id="pickup-turcks">
+          <img src="./assets/vector-truck.png" alt="" />
+          <p>Pickup Truck</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- End of Pricing cards section -->
-</body>
+    <!-- End of Our Pricing-plans section/size car cards  -->
+
+    <!-- Pricing Cards section -->
+    <div class="grid-container">
+      <!-- Repeat this grid item for each card -->
+      <div class="grid-item">
+        <div class="card-container">
+          <img src="./assets/packages-img.png" alt="Image description" />
+          <p>15 - 20 minutes</p>
+          <p>Basic Interior Wash:</p>
+          <p>Starting at: $20 - $35</p>
+          <a href="#" class="card-button">Button Text</a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div class="card-container">
+          <img src="./assets/packages-img-1.png" alt="Image description" />
+          <p>30 - 45 minutes</p>
+          <p>Deluxe Package:</p>
+          <p>Starting at: $30 - $40</p>
+          <a href="#" class="card-button">Button Text</a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div class="card-container">
+          <img src="./assets/packages-img-2.png" alt="Image description" />
+          <p>45 - 60 minutes</p>
+          <p>Premium Interior Package:</p>
+          <p>Starting at: $50 - $60</p>
+          <a href="#" class="card-button">Button Text</a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div class="card-container">
+          <img
+            src="./assets/homepage-cleaning-img1.png"
+            alt="Image description"
+          />
+          <p>10 - 15 minutes</p>
+          <p>Basic Exterior Wash:</p>
+          <p>Starting at: $20 - $30</p>
+          <a href="#" class="card-button">Button Text</a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div class="card-container">
+          <img src="./assets/packages-img-3.png" alt="Image description" />
+          <p>1 - 1.5 hours</p>
+          <p>Basic Full Detail:</p>
+          <p>Starting at: $40 - $50</p>
+          <a href="#" class="card-button">Button Text</a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div class="card-container">
+          <img src="./assets/packages-img-4.png" alt="Image description" />
+          <p>1.5 - 2 hours</p>
+          <p>Premium Full Detail:</p>
+          <p>Starting at: $60 - $80</p>
+          <a href="#" class="card-button">Button Text</a>
+        </div>
+      </div>
+      <!-- End of grid item -->
+    </div>
+    <!-- End of Pricing cards section -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // Selects all elements with the class size-car
+      $(document).ready(function () {
+        const sizeCars = $(".size-car");
+
+        sizeCars.click(function () {
+          $('.card-container').each(function () {
+            
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
