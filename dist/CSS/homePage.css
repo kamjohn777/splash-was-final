@@ -513,6 +513,9 @@ nav {
     line-height: 1.5;
     font-size: 1.2rem;
     color: #42526B;
+
+    /* might remove */
+    margin: 17px;
 }
 /* End of our services style code */
 
@@ -570,6 +573,11 @@ nav {
     color: white;
 }
 
+.btn-soos-container a {
+    color: white;
+    text-decoration: none;
+}
+
 .image-service-container {
     width: 90%;
     margin: auto;
@@ -605,7 +613,8 @@ nav {
     right: 0;
     bottom: 0;
     left: 0;
-    background: radial-gradient(circle at center bottom, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 9%) 70%, rgb(0 0 0 / 38%) 100%);
+    background: radial-gradient(circle at center bottom, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 49%) 70%, rgb(0 0 0 / 59%) 100%);
+    /* background: radial-gradient(circle at center bottom, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 9%) 70%, rgb(0 0 0 / 38%) 100%); */
     border-radius: 10px;
 }
 
@@ -624,7 +633,8 @@ nav {
     right: 0;
     bottom: 0;
     left: 0;
-    background: radial-gradient(circle at center bottom, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 9%) 70%, rgb(0 0 0 / 38%) 100%);
+    background: radial-gradient(circle at center bottom, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 49%) 70%, rgb(0 0 0 / 59%) 100%);
+    /* background: radial-gradient(circle at center bottom, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 9%) 70%, rgb(0 0 0 / 38%) 100%); */
     border-radius: 10px;
 }
 
@@ -643,13 +653,23 @@ nav {
     right: 0;
     bottom: 0;
     left: 0;
-    background: radial-gradient(circle at center bottom, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 9%) 70%, rgb(0 0 0 / 38%) 100%);
+    background: radial-gradient(circle at center bottom, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 49%) 70%, rgb(0 0 0 / 59%) 100%);
+    /* background: radial-gradient(circle at center bottom, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 9%) 70%, rgb(0 0 0 / 38%) 100%); */
     border-radius: 10px;
 }
 
 .isc-txt-content-wrap {
+    /* display: flex;
+    align-items: center; */
+
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.isc-card-txt {
+    z-index: 100;
+    width: 80%;
 }
 
 .isc-card-txt h4 {
@@ -662,6 +682,23 @@ nav {
 
 .isc-card-txt p {
     color: white;
+}
+
+.direct-icon {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #00000099;
+}
+
+.direct-icon img {
+    height: 20px;
+    width: 20px;
 }
 /* End of some of our features section */
 
@@ -716,6 +753,7 @@ nav {
 
 .second-title-wps-wrap h2 {
     margin: 0;
+    margin-bottom: 15px;
 }
 
 .process-card-wrap {
@@ -735,10 +773,16 @@ nav {
 }
 
 .wps-card-circle-wrap {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     width: 95%;
+    align-items: center; */
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .wps-card-wrap {
@@ -756,11 +800,58 @@ nav {
     justify-content: space-evenly;
 }
 
-.wps-card-img img{
+.wps-card-img {
+    /* height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%; */
+
+    /* height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
     position: absolute;
-    top: 25%;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+    /* height: 75px;
+    width: 75px; */
+
+    height: 61px;
+    width: 61px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 23%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px #0000003d;
+
+}
+
+.wps-card-img img{
+    /* position: absolute;
+   
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34px; */
+
+        /* position: relative; */
+    /* top: 25%; */
+    /* top: 28%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+
+    /* width: 35px;
+    height: 35px; */
+
+    width: 30px;
+    height: 30px;
 }
 
 .wps-card-txt {
@@ -789,7 +880,8 @@ nav {
     font-size: 1rem;
     font-family: sans-serif;
     color: rgb(154, 168, 182);
-    width: 285px;
+    /* width: 285px; */
+    width: 300px;
     line-height: 2;
     margin-bottom: 18px;
 }
