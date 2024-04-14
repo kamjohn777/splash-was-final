@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./CSS/packages.css" />
-    <title>Bookings</title>
+    <title>Packages</title>
   </head>
   <body>
     <!-- nav section -->
@@ -110,9 +110,9 @@
       <div class="grid-item">
         <div class="card-container">
           <img src="./assets/packages-img.png" alt="Image description" />
-          <p>15 - 20 minutes</p>
-          <p>Basic Interior Wash:</p>
-          <p>Starting at: $20 - $35</p>
+          <p class="time">15 - 20 minutes</p>
+          <p>Basic Interior Wash</p>
+          <p class="basic-price">Starting at: $20 - $35</p>
           <a href="#" class="card-button">Button Text</a>
         </div>
       </div>
@@ -120,9 +120,9 @@
       <div class="grid-item">
         <div class="card-container">
           <img src="./assets/packages-img-1.png" alt="Image description" />
-          <p>30 - 45 minutes</p>
-          <p>Deluxe Package:</p>
-          <p>Starting at: $30 - $40</p>
+          <p class="time">30 - 45 minutes</p>
+          <p>Deluxe Package</p>
+          <p class="deluxe-price">Starting at: $30 - $40</p>
           <a href="#" class="card-button">Button Text</a>
         </div>
       </div>
@@ -130,9 +130,9 @@
       <div class="grid-item">
         <div class="card-container">
           <img src="./assets/packages-img-2.png" alt="Image description" />
-          <p>45 - 60 minutes</p>
-          <p>Premium Interior Package:</p>
-          <p>Starting at: $50 - $60</p>
+          <p class="time">45 - 60 minutes</p>
+          <p>Premium Interior Package</p>
+          <p class="premium-price">Starting at: $50 - $60</p>
           <a href="#" class="card-button">Button Text</a>
         </div>
       </div>
@@ -143,9 +143,9 @@
             src="./assets/homepage-cleaning-img1.png"
             alt="Image description"
           />
-          <p>10 - 15 minutes</p>
-          <p>Basic Exterior Wash:</p>
-          <p>Starting at: $20 - $30</p>
+          <p class="time">10 - 15 minutes</p>
+          <p>Basic Exterior Wash</p>
+          <p class="price">Starting at: $20 - $30</p>
           <a href="#" class="card-button">Button Text</a>
         </div>
       </div>
@@ -153,9 +153,9 @@
       <div class="grid-item">
         <div class="card-container">
           <img src="./assets/packages-img-3.png" alt="Image description" />
-          <p>1 - 1.5 hours</p>
-          <p>Basic Full Detail:</p>
-          <p>Starting at: $40 - $50</p>
+          <p class="time">1 - 1.5 hours</p>
+          <p>Basic Full Detail</p>
+          <p class="price">Starting at: $40 - $50</p>
           <a href="#" class="card-button">Button Text</a>
         </div>
       </div>
@@ -163,9 +163,9 @@
       <div class="grid-item">
         <div class="card-container">
           <img src="./assets/packages-img-4.png" alt="Image description" />
-          <p>1.5 - 2 hours</p>
-          <p>Premium Full Detail:</p>
-          <p>Starting at: $60 - $80</p>
+          <p class="time">1.5 - 2 hours</p>
+          <p>Premium Full Detail</p>
+          <p class="price">Starting at: $60 - $80</p>
           <a href="#" class="card-button">Button Text</a>
         </div>
       </div>
@@ -174,16 +174,63 @@
     <!-- End of Pricing cards section -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
     <script>
-      // Selects all elements with the class size-car
       $(document).ready(function () {
-        const sizeCars = $(".size-car");
+       let carSizeInfo = {
+        "mid-size": {
+      "Basic Interior Wash": { time: "15 - 20 minutes", price: "$15 - $25" },
+      "Deluxe Package": { time: "30 - 45 minutes", price: "30 - $40" },
+      "Premium Interior Package": { time: "45 - 60 minutes", price: "$50 - $60" },
+      "Basic Exterior Wash": { time: "10 - 15 minutes", price: "$10 - $20" },
+      "Basic Full Detail": { time: "1 - 1.5 hours", price: "$40 - $50" },
+      "Premium Full Detail": { time: "1.5 - 2 hours", price: "$60 - $80" }
+    }, 
+    "small-Size": {
+      "Basic Interior Wash": { time: "15 - 20 minutes", price: "$10 - $20" },
+      "Deluxe Package": { time: "20 - 30 minutes", price: "25 - $35" },
+      "Premium Interior Package": { time: "30 - 45 minutes", price: "$40 - $50" },
+      "Basic Exterior Wash": { time: "8 - 12 minutes", price: "$8 - $15" },
+      "Basic Full Detail": { time: "1 - 1.5 hours", price: "$35 - $45" },
+      "Premium Full Detail": { time: "1.5 - 2 hours", price: "$50 - $70" }
+    },
+    "full-Size": {
+      "Basic Interior Wash": { time: "20 - 30 minutes", price: "$20 - $30" },
+      "Deluxe Package": { time: "30 - 45 minutes", price: "35 - $45" },
+      "Premium Interior Package": { time: "45 - 60 minutes", price: "$55 - $65" },
+      "Basic Exterior Wash": { time: "10 - 15 minutes", price: "$12 - $22" },
+      "Basic Full Detail": { time: "1 - 1.5 hours", price: "$45 - $55" },
+      "Premium Full Detail": { time: "1.5 - 2 hours", price: "$65 - $85" }
+    },
+    "pickup-turcks": {
+      "Basic Interior Wash": { time: "25 - 35 minutes", price: "$25 - $35" },
+      "Deluxe Package": { time: "35 - 45 minutes", price: "$40 - $50" },
+      "Premium Interior Package": { time: "45 - 60 minutes", price: "$60 - $70" },
+      "Basic Exterior Wash": { time: "12 - 18 minutes", price: "$15 - $25" },
+      "Basic Full Detail": { time: "1 - 1.5 hours", price: "$50 - $60" },
+      "Premium Full Detail": { time: "1.5 - 2 hours", price: "$70 - $90" }
+    
+    }
+       };
 
-        sizeCars.click(function () {
-          $('.card-container').each(function () {
-            
-          });
-        });
+        // Function to update pricing and duration information
+  function updatePackageInfo(sizeCarId) {
+    $(".card-container").each(function () {
+      var washType = $(this).find("p:nth-child(3)").text();
+      var info = carSizeInfo[sizeCarId][washType];
+      $(this).find(".time").text(info.time);
+      $(this).find(".price").text("Starting at: " + info.price);
+    });
+  }
+
+  // Event listener for when a user clicks on a car size
+  $(".size-car").click(function () {
+    // Get the ID of the clicked car size
+    var sizeCarId = $(this).attr("id");
+
+    // Update pricing and duration based on the clicked car size
+    updatePackageInfo(sizeCarId);
+  });
       });
     </script>
   </body>
