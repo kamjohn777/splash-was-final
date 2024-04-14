@@ -1,0 +1,168 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-div1 img {
+    height: 45px;
+}
+
+.nav-div2 ul {
+    display: flex;
+    width: 340px;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-div2 ul li a {
+    text-decoration: none;
+    color: #565656;
+    transition: all 0.3s ease; /* Smooth transition */
+    padding-bottom: 5px;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.nav-div2 ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #89CFF0, #3BA6D8);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-div2 ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-div3 {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logout {
+    height: 35px;
+    width: 75px;
+    border-radius: 5px;
+    border: 2px solid lightblue;
+    background: transparent;
+    color: #89CFF0;
+}
+
+.btn-outline-success {
+    height: 35px;
+    width: 75px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to right, #3BA6D8, #89CFF0);
+    color: white;
+}
+/* End on nav styles */
+
+/* img styles */
+#section-img {
+    width: 100%; /* Full width */
+    height: 500px; /* Full viewport height */
+    overflow: hidden; /* Hide anything that goes outside the section */
+}
+
+.img-wrapper {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-image: url('../assets/package-page-img.png'); /* Replace with the path to your image */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the image to cover the container */
+}
+/* end of img styles */
+
+/* Our Packages styles */
+#pricing_plans_sec {
+margin-top: 100px;
+}
+
+.ob-sec-circles {
+    height: 2px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #032498;
+}
+
+.ob-title-wrap {
+    margin: auto;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.ob-title-wrap h2 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+.sub-faqs-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 320px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.sos-h3-wrap h3 {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #032498;
+    margin: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.ob-title-wrap h2 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.size-cars-card-wrap {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    width: 85%;
+    margin-top: 50px;
+}
+
+.size-car {
+    display: flex;
+    width: 180px;
+    height: 52px;
+    /* background: red; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1.6px solid #b1bac18a;
+    box-shadow: 0px 0px 2px #00000045;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    gap: 12px;
+}
+
+.size-car:hover {
+    border-color: blue; /* Change border color to blue on hover */
+    transform: scale(1.05); /* Slightly scale up the element on hover */
+}
+/* end of our packages styles */
+
+/* Pricing Cards section styles */
+
+/* End of Pricing Cards section styles */
