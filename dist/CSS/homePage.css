@@ -1,3 +1,4 @@
+/* nav styles */
 nav {
     display: flex;
     align-items: center;
@@ -66,6 +67,7 @@ nav {
     background: linear-gradient(to right, #3BA6D8, #89CFF0);
     color: white;
 }
+/* End on nav styles */
 
 #section-img {
     height: 500px; 
