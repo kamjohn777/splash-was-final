@@ -306,6 +306,8 @@ nav {
     font-size: 1.4rem;
     line-height: 1.5;
     color: #525252c7;
+    /* margin-bottom: 15px; */
+    margin-bottom: 25px;
 }
 
 .acs-content-div {
@@ -361,26 +363,49 @@ nav {
     height: 200px;
 }
 .cw-card {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 75%;
     background: #fff;
     height: 70px;
     border-radius: 12px;
+    box-shadow: 1px 2px 10px #221e2636; */
+
+    /* padding-right: 10px; */
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 75%;
+    background: #fff;
+    height: 70px;
+    border-radius: 12px;
     box-shadow: 1px 2px 10px #221e2636;
+    padding: 5px;
 }
 
 .cw-card img {
+    /* display: flex;
+    background: radial-gradient(circle, #89CFF0, #3BA6D8);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+
+    margin-left: 10px;
+    margin-right: 10px; */
+
     display: flex;
     background: radial-gradient(circle, #89CFF0, #3BA6D8);
     height: 35px;
     width: 35px;
     border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .cw-card p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #101130;
     font-family: sans-serif;
 }
