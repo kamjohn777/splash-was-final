@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./CSS/homePage.css" />
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css" rel="stylesheet"> -->
     <title>Home</title>
@@ -950,7 +951,7 @@
   <div class="gits-content-txt">
     <h2>Get in Touch With Us</h2>
     <!-- <p>Have questions about our car washing services? Want to schedule an appointment? Get in touch with us today!</p> -->
-    <p>"Have questions about our comprehensive range of car washing services? Want to schedule an appointment for a professional clean that leaves your vehicle sparkling? Get in touch with us today and let our friendly team assist you every step of the way!"</p>
+    <p>Have questions about our comprehensive range of car washing services? Want to schedule an appointment for a professional clean that leaves your vehicle sparkling? Get in touch with us today and let our friendly team assist you every step of the way!</p>
 
     <div class="contact-info">
      <div class="sub-first-wrap">
@@ -980,13 +981,64 @@
     </div>
   </div>
 
-  <form id="contact-form" class="contact-form">
+  <!-- <form id="contact-form" class="contact-form">
     <h2>Contact Me</h2>
+    <label for=""></label>
     <input type="text" id="name" placeholder="Name">
     <input type="email" id="email" placeholder="Email">
     <textarea id="message" placeholder="Message"></textarea>
     <button type="submit">Submit</button>
-  </form>
+  </form> -->
+
+  <form id="contact-form" class="contact-form">
+   <div class="form-div-wrap">
+    <label for="service-request">Service Request</label>
+    <select id="service-request">
+        <option value="">--Please choose an option--</option>
+        <option value="service1">Service 1</option>
+        <option value="service2">Service 2</option>
+        <option value="service3">Service 3</option>
+        <!-- Add more options as needed -->
+    </select>
+   </div>
+
+   <div class="form-div-wrap">
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Name">
+   </div>
+   
+   <div class="form-div-wrap">
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" placeholder="Phone Number">
+   </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div class="social-medias-wrap">
+  <div class="smw-icon-wrap">
+    <a href="https://www.facebook.com" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </div>
+  <div class="smw-icon-wrap">
+    <a href="https://www.instagram.com" target="_blank">
+      <i class="fab fa-instagram"></i>
+
+      
+    </a>
+  </div>
+  <div class="smw-icon-wrap">
+    <a href="https://www.twitter.com" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+  <div class="smw-icon-wrap">
+    <a href="https://www.linkedin.com" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+</div>
 </section>
 <!-- End of Get in Touch Section -->
 
