@@ -1173,6 +1173,7 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: white;
+    margin-bottom: 200px;
 }
 
 .background-img-container {
@@ -1183,7 +1184,8 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    /* height: 300px; */
+    height: 340px;
     width: 90%;
     border-radius: 15px;
 }
@@ -1232,7 +1234,57 @@ nav {
 
 .gits-content-txt {
     position: absolute;
+    left: 9%;
+    width: 650px;
+    background: red;
 }
+
+.gits-content-txt h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    color: white;
+}
+
+.gits-content-txt p {
+    line-height: 2;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.sub-first-wrap {
+    /* display: flex;
+    align-items: center;
+    width: 280px;
+    background: green;
+    justify-content: space-around; */
+
+    display: flex;
+    align-items: center;
+    width: 280px;
+    background: green;
+    justify-content: center;
+    gap: 12px;
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+    height: 61px;
+}
+
+.contact-info-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact-info-item h4 {margin: 0;}
 /* End of Contact Us Section */
 
 
