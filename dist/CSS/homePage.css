@@ -1236,7 +1236,7 @@ nav {
     position: absolute;
     left: 9%;
     width: 650px;
-    background: red;
+    /* background: red; */
 }
 
 .gits-content-txt h2 {
@@ -1257,6 +1257,8 @@ nav {
     display: flex;
     align-items: center;
     margin-top: 22px;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .sub-first-wrap {
@@ -1269,7 +1271,7 @@ nav {
     display: flex;
     align-items: center;
     width: 280px;
-    background: green;
+    /* background: green; */
     justify-content: center;
     gap: 12px;
     border-bottom: 1px solid white;
@@ -1284,7 +1286,11 @@ nav {
     justify-content: space-around;
 }
 
-.contact-info-item h4 {margin: 0;}
+.contact-info-item h4 {
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+}
 /* End of Contact Us Section */
 
 
