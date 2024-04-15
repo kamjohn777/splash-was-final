@@ -200,3 +200,107 @@ margin-top: 100px;
     border-radius: 5px; /* Adjust as needed */
   }
 /* End of Pricing Cards section styles */
+
+
+/* footer style */
+footer {
+    background-color: #060e2a;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-column {
+    /* flex: 1; */
+    margin-right: 20px;
+    width: 33%;
+    /* background: red; */
+  }
+  
+  .footer-column:last-child {
+    margin-right: 0;
+  }
+  
+  /* .footer-column h3 {
+    margin-bottom: 15px;
+  } */
+
+  .fc-logo-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+    .fc-logo-wrap img {
+        height: 45px;
+    }
+
+    .fc-logo-wrap h4 {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .footer-column p {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+
+    .footer-c-2 h3 {
+        width: 50%;
+        margin: 15px auto;
+    }
+
+    .footer-c-2 ul {
+        /* list-style: none;
+        padding: 0;
+     */
+
+        list-style: none;
+        padding: 0;
+        margin: auto;
+        width: 50%;
+    }
+
+    .footer-c-2 ul li {
+        margin-bottom: 18px;
+    }
+
+    .footer-c-3 ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-c-3 ul li {
+        margin-bottom: 10px;
+    display: flex;
+    width: 50%;
+    /* background: red; */
+    justify-content: space-evenly;
+    }
+
+    .footer-c-3 ul li img {
+        height: 20px;
+    }
+
+    .rights-div {
+        background: white;
+        width: 80%;
+        margin: auto;
+        height: 50px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+    padding: 5px 20px;
+    margin-top: 25px;
+    }
+
+    .rights-div p {
+        color: black;
+    }
+/* end of footer style */
