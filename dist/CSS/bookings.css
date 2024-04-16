@@ -90,28 +90,81 @@ nav {
 
 
     display: flex;
-    height: 600px;
-    width: 80%;
+    /* height: 600px;
+    width: 80%; */
+    height: 750px;
+    /* width: 70%; */
+    width: 86%;
     position: absolute;
     top: 20%;
     left: 50%; /* Add this line */
     transform: translateX(-50%);
+    border-radius: 10px;
 }
 
 .left-side-booking-form {
     background-color: red;
     height: 100%;
     width: 50%;
+    border-radius: 10px;
+}
+
+.left-side-booking-form form {
+        /* margin-top: 200px; */
+        /* height: 100%; */
+        height: 90%;
+        background: green;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 }
 
 .right-side-display-of-package {
     background-color: yellow;
     height: 100%;
     width: 50%;
+    border-radius: 10px;
 }
 
-.left-side-booking-form form, .right-side-display-of-package form {
-    margin-top: 200px; /* Adjust this value as needed */
+/* .left-side-booking-form form, .right-side-display-of-package form {
+    margin-top: 200px;
+} */
+
+.date-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.date-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#date {
+    padding-left: 30px; /* Adjust as needed */
+}
+
+.time-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.time-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#time {
+    padding-left: 30px; /* Adjust as needed */
+}
+
+.basic-info-div-wrap {
+    display: flex;
+
 }
 /* End of booking style */
 
@@ -128,7 +181,8 @@ nav {
     justify-content: center;
     background-color: white;
     margin-bottom: 200px;
-    margin-top: 500px;
+    /* margin-top: 500px; */
+    margin-top: 650px;
 }
 
 .background-img-container {

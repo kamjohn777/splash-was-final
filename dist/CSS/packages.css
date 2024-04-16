@@ -193,12 +193,47 @@ margin-top: 100px;
   
   .card-button {
     display: inline-block;
-    padding: 10px 20px; /* Adjust as needed */
+    padding: 10px 20px;
     text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px; /* Adjust as needed */
-  }
+    background-color: white;
+    border: 1px solid;
+    color: #1bb9fb;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    left: 5%;
+    /* right: 50%; */
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #19c6ff, #008edd);
+    transform: scale(0);
+    opacity: 0; /* Start with no opacity */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animate both transform and opacity */
+}
+
+.card-button:hover::before {
+    transform: scale(1);
+    opacity: 1; /* Full opacity on hover */
+}
+
+.card-button span {
+    position: relative;
+    transition: color 0.3s ease; /* This line adds a smooth transition effect */
+}
+
+.card-button:hover span {
+    color: white; /* This line changes the color of the text to white when the button is hovered over */
+}
 /* End of Pricing Cards section styles */
 
 
