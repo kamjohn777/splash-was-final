@@ -1,3 +1,11 @@
+:root {
+    --form-input-bg: #f4f5f7s;
+    --form-text-color: #4b4c4f;
+    -form-text-blue: #bbe0e7;
+    --form-text-dark: #64686a;
+}
+
+
 /* nav styles */
 .navigation-bar {
     display: flex;
@@ -188,6 +196,10 @@
 #date, #time {
     padding-left: 0 !important;
 }
+
+.ui.input.left.icon input {
+    background: var(--form-input-bg);
+}
 /* End of booking style */
 
 
@@ -204,7 +216,8 @@
     background-color: white;
     margin-bottom: 200px;
     /* margin-top: 500px; */
-    margin-top: 650px;
+    /* margin-top: 650px; */
+    margin-top: 730px;
 }
 
 .background-img-container {
