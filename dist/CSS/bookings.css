@@ -81,32 +81,26 @@
 
 /* booking card style */
 .booking-container {
-    /* display: flex;
-    height: 500px;
-    width: 80%;
-    margin: auto;
-    position: absolute;
-    top: 30%; */
-
-
     display: flex;
-    /* height: 600px;
-    width: 80%; */
     height: 750px;
-    /* width: 70%; */
     width: 86%;
     position: absolute;
     top: 20%;
     left: 50%; /* Add this line */
     transform: translateX(-50%);
     border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 16px #00000038;
 }
 
 .left-side-booking-form {
-    background-color: red;
+    /* background-color: red; */
     height: 100%;
     width: 50%;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .left-side-booking-form form {
@@ -120,10 +114,18 @@
 }
 
 .right-side-display-of-package {
-    background-color: yellow;
     height: 100%;
     width: 50%;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-right-wrap {
+    display: flex;
+    flex-direction: column;
 }
 
 /* .left-side-booking-form form, .right-side-display-of-package form {
@@ -168,17 +170,23 @@
 }
 
 .ui.form {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    
+    height: 100%;
+    width: 90%;
+    /* width: 80%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .ui-form-btns {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+}
+
+
+#date, #time {
+    padding-left: 0 !important;
 }
 /* End of booking style */
 
