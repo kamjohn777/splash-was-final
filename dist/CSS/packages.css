@@ -234,6 +234,22 @@ margin-top: 100px;
 .card-button:hover span {
     color: white; /* This line changes the color of the text to white when the button is hovered over */
 }
+
+.time {
+    color: darkblue;
+    font-family: sans-serif;
+}
+
+.title {
+    color: black;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.price {
+    color: #1bb9fb;
+    font-family: sans-serif;
+}
 /* End of Pricing Cards section styles */
 
 

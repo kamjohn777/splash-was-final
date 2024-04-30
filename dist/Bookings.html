@@ -1,161 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./CSS/bookings.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Semantic UI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/bookings.css" />
     <title>Booking</title>
-</head>
-<body>
-    <nav>
-        <div class="nav-div1">
-          <img src="./assets/splash-homepage-logo.png" alt="" />
-        </div>
-  
-        <div class="nav-div2">
-          <ul>
-            <li><a href="./Home.html">Home</a></li>
-            <li><a href="./Packages.html">Packages</a></li>
-            <li><a href="./Bookings.html">Booking</a></li>
-            <li><a href="./Contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-  
-        <div class="nav-div3">
-          <button class="logout">Sign Up</button>
-          <button class="btn btn-outline-success" type="button" id="signOutBtn">
-            Logout
-          </button>
-        </div>
-      </nav>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <div class="nav-div1">
+        <img src="./assets/splash-homepage-logo.png" alt="" />
+      </div>
 
+      <div class="nav-div2">
+        <ul>
+          <li><a href="./Home.html">Home</a></li>
+          <li><a href="./Packages.html">Packages</a></li>
+          <li><a href="./Bookings.html">Booking</a></li>
+          <li><a href="./Contact.html">Contact Us</a></li>
+        </ul>
+      </div>
 
-      <!-- Blue background top sec -->
-<div class="blue-background">
-Home >>> Booking 
-</div>
-      <!-- End of blue background sec -->
+      <div class="nav-div3">
+        <button class="logout">Sign Up</button>
+        <button class="btn btn-outline-success" type="button" id="signOutBtn">
+          Logout
+        </button>
+      </div>
+    </nav>
 
+    <!-- Blue background top sec -->
+    <div class="blue-background">Home >>> Booking</div>
+    <!-- End of blue background sec -->
 
-      <!-- Booking Container section -->
-<div class="booking-container">
-    <div class="left-side-booking-form">
-        <h3>Booking Details</h3>
-    
-        <form>
-            <div>
-                <label for="date">Date:</label>
-                <div class="date-input-container">
-                    <!-- <i class="date-icon">📅</i> -->
-                    <i class="fas fa-calendar-week date-icon"></i>
-                    <input type="date" id="date" name="date">
-                </div>
+    <!-- Booking Container section -->
+    <div class="booking-container">
+      <div class="left-side-booking-form">
+        <!-- <h3>Booking Details</h3> -->
+
+        <!-- Semantic UI CSS -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        />
+
+        <!-- Booking Details Form -->
+        <div class="ui form">
+          <h3 class="ui dividing header">Booking Details</h3>
+          <div class="field">
+            <label>Date</label>
+            <div class="ui calendar" id="date">
+              <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" placeholder="Date" />
+              </div>
             </div>
-    
-            <div>
-                <label for="time">Time:</label>
-                <div class="time-input-container">
-                    <i class="fas fa-clock time-icon"></i>
-                    <input type="time" id="time" name="time">
-                </div>
+          </div>
+          <div class="field">
+            <label>Time</label>
+            <div class="ui calendar" id="time">
+              <div class="ui input left icon">
+                <i class="clock icon"></i>
+                <input type="text" placeholder="Time" />
+              </div>
             </div>
-
-
-
-    
-           <div class="basic-info-div-wrap">
-            <div class="bidw-sub1">
-                <div>
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname">
-                </div>
-        
-                <div>
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname">
-                </div>
+          </div>
+          <div class="two fields">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" placeholder="First Name" />
             </div>
-    
-            <div class="bidw-sub2">
-                <div>
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email">
-                </div>
-        
-                <div>
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input type="text" placeholder="Last Name" />
             </div>
-    
-           </div>
-
-
-
-
-
-            <div>
-                <label for="accessories">Do you have accessories like:</label>
-                <textarea id="accessories" name="accessories"></textarea>
+          </div>
+          <div class="two fields">
+            <div class="field">
+              <label>Email Address</label>
+              <input type="email" placeholder="Email Address" />
             </div>
-    
-            <div>
-                <label for="vehicle">What is the make and model of vehicle?</label>
-                <input type="text" id="vehicle" name="vehicle">
+            <div class="field">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Phone Number" />
             </div>
-    
-            <div>
-                <button type="submit">Confirm Booking</button>
-                <button type="reset">Cancel</button>
-            </div>
-        </form>
-    </div>
-
-    <div class="right-side-display-of-package"></div>
-</div>
-<!-- End of booking container section -->
-
-
-  
-<!-- Get in Touch Section -->
-<section id="get-in-touch-sec">
-    <div class="background-img-container"></div>
-  
-    <div class="gits-content-txt">
-      <h2>Get in Touch With Us</h2>
-      <!-- <p>Have questions about our car washing services? Want to schedule an appointment? Get in touch with us today!</p> -->
-      <p>Have questions about our comprehensive range of car washing services? Want to schedule an appointment for a professional clean that leaves your vehicle sparkling? Get in touch with us today and let our friendly team assist you every step of the way!</p>
-  
-      <div class="contact-info">
-       <div class="sub-first-wrap">
-        <div class="contact-info-item">
-          <img class="contact-icon" src="./assets/clarity_email-solid.png" alt="Phone icon">
+          </div>
+          <div class="field">
+            <label>Additional Questions</label>
+            <label>Do you have accessories like:</label>
+            <input type="text" placeholder="Enter your answer here" />
+          </div>
+          <div class="field">
+            <label>What is the make and model of vehicle?</label>
+            <input type="text" placeholder="Make and Model" />
+          </div>
+          
+          <div class="ui-form-btns">
+            <button class="ui button" type="submit">Confirm Booking</button>
+          <button class="ui button" type="reset">Cancel</button>
+          </div>
         </div>
-        <div class="contact-info-item">
-          <h4 class="contact-title">Email address</h4>
-          <p class="contact-detail">info@carwash.com</p>
+      </div>
+
+      <div class="right-side-display-of-package">
+        <img src="path-to-image.jpg" alt="Package Image">
+        <p>Duration: 3 hours</p>
+        <h2>Package Title</h2>
+        <p>Price: $100</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+        <h3>What's included in this service:</h3>
+        <div class="grid-container">
+          <div class="grid-item">Content 1</div>
+          <div class="grid-item">Content 2</div>
+          <div class="grid-item">Content 3</div>
+          <div class="grid-item">Content 4</div>
         </div>
-       </div>
-  
-  
-       <div class="sub-first-wrap">
-        <div class="contact-info-item">
-          <img class="contact-icon" src="./assets/Group (1).png" alt="Phone icon">
-        </div>
-        <div class="contact-info-item">
-          <h4 class="contact-title">Houston Phone Number</h4>
-          <p class="contact-detail">123-456-7890</p>
-        </div>
-       </div>
-        <!-- <div class="contact-info-item">
+      </div>    </div>
+    <!-- End of booking container section -->
+
+    <!-- Get in Touch Section -->
+    <section id="get-in-touch-sec">
+      <div class="background-img-container"></div>
+
+      <div class="gits-content-txt">
+        <h2>Get in Touch With Us</h2>
+        <!-- <p>Have questions about our car washing services? Want to schedule an appointment? Get in touch with us today!</p> -->
+        <p>
+          Have questions about our comprehensive range of car washing services?
+          Want to schedule an appointment for a professional clean that leaves
+          your vehicle sparkling? Get in touch with us today and let our
+          friendly team assist you every step of the way!
+        </p>
+
+        <div class="contact-info">
+          <div class="sub-first-wrap">
+            <div class="contact-info-item">
+              <img
+                class="contact-icon"
+                src="./assets/clarity_email-solid.png"
+                alt="Phone icon"
+              />
+            </div>
+            <div class="contact-info-item">
+              <h4 class="contact-title">Email address</h4>
+              <p class="contact-detail">info@carwash.com</p>
+            </div>
+          </div>
+
+          <div class="sub-first-wrap">
+            <div class="contact-info-item">
+              <img
+                class="contact-icon"
+                src="./assets/Group (1).png"
+                alt="Phone icon"
+              />
+            </div>
+            <div class="contact-info-item">
+              <h4 class="contact-title">Houston Phone Number</h4>
+              <p class="contact-detail">123-456-7890</p>
+            </div>
+          </div>
+          <!-- <div class="contact-info-item">
           <h4 class="contact-title">Houston Phone Number</h4>
           <p class="contact-detail">123456789</p>
         </div> -->
+        </div>
       </div>
-    </div>
-  
-    <!-- <form id="contact-form" class="contact-form">
+
+      <!-- <form id="contact-form" class="contact-form">
       <h2>Contact Me</h2>
       <label for=""></label>
       <input type="text" id="name" placeholder="Name">
@@ -163,104 +184,122 @@ Home >>> Booking
       <textarea id="message" placeholder="Message"></textarea>
       <button type="submit">Submit</button>
     </form> -->
-  
-    <form id="contact-form" class="contact-form">
-     <div class="form-div-wrap">
-      <label for="service-request">Service Request</label>
-      <select id="service-request">
-          <option value="">--Please choose an option--</option>
-          <option value="service1">Service 1</option>
-          <option value="service2">Service 2</option>
-          <option value="service3">Service 3</option>
-          <!-- Add more options as needed -->
-      </select>
-     </div>
-  
-     <div class="form-div-wrap">
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Name">
-     </div>
-     
-     <div class="form-div-wrap">
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" placeholder="Phone Number">
-     </div>
-  
-      <button type="submit">Submit</button>
-  </form>
-  
-  <div class="social-medias-wrap">
-    <div class="smw-icon-wrap">
-      <a href="https://www.facebook.com" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-    </div>
-    <div class="smw-icon-wrap">
-      <a href="https://www.instagram.com" target="_blank">
-        <i class="fab fa-instagram"></i>
-  
-        
-      </a>
-    </div>
-    <div class="smw-icon-wrap">
-      <a href="https://www.twitter.com" target="_blank">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
-    <div class="smw-icon-wrap">
-      <a href="https://www.linkedin.com" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </div>
-  </div>
-  </section>
-  <!-- End of Get in Touch Section -->
-  
-  
 
-      
-<!-- Footer -->
- <footer>
-    <div class="footer-container">
-      <div class="footer-column">
-        <div class="fc-logo-wrap">
-          <img src="./assets/Screenshot_20240402-031706__01__01 2.png" alt="">
-          <h4>SPLASH WASH</h4>
+      <form id="contact-form" class="contact-form">
+        <div class="form-div-wrap">
+          <label for="service-request">Service Request</label>
+          <select id="service-request">
+            <option value="">--Please choose an option--</option>
+            <option value="service1">Service 1</option>
+            <option value="service2">Service 2</option>
+            <option value="service3">Service 3</option>
+            <!-- Add more options as needed -->
+          </select>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officia nam nemo recusandae architecto facilis minima?.</p>
+
+        <div class="form-div-wrap">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Name" />
+        </div>
+
+        <div class="form-div-wrap">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Phone Number" />
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="social-medias-wrap">
+        <div class="smw-icon-wrap">
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+        <div class="smw-icon-wrap">
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="smw-icon-wrap">
+          <a href="https://www.twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <div class="smw-icon-wrap">
+          <a href="https://www.linkedin.com" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
       </div>
-      <div class="footer-column  footer-c-2">
-        <h3>Links</h3>
-        <ul>
-          <li>Home</li>
-          <li>Services</li>
-          <li>Booking</li>
-          <li>Contact Us</li>
-        </ul>
+    </section>
+    <!-- End of Get in Touch Section -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <div class="fc-logo-wrap">
+            <img
+              src="./assets/Screenshot_20240402-031706__01__01 2.png"
+              alt=""
+            />
+            <h4>SPLASH WASH</h4>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officia
+            nam nemo recusandae architecto facilis minima?.
+          </p>
+        </div>
+        <div class="footer-column footer-c-2">
+          <h3>Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Booking</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div class="footer-column footer-c-3">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <img src="./assets/clarity_email-solid.png" alt="" />
+              Lorem, ipsum dolor.
+            </li>
+            <li>
+              <img src="./assets/Group (1).png" alt="" />
+              Lorem, ipsum dolor.
+            </li>
+            <li>
+              <img src="./assets/Group.png" alt="" />
+              Lorem, ipsum dolor.
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-column footer-c-3">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><img src="./assets/clarity_email-solid.png" alt="">
-            Lorem, ipsum dolor.
-          </li>
-          <li><img src="./assets/Group (1).png" alt="">
-            Lorem, ipsum dolor.
-          </li>
-          <li><img src="./assets/Group.png" alt="">
-            Lorem, ipsum dolor.
-          </li>
-        </ul>
+
+      <div class="rights-div">
+        <p>
+          © 2023 by Splash Wash. Proudly created with <span>shalom.com</span>
+        </p>
+
+        <p>Privacy Policy <span></span> Terms of Use</p>
       </div>
-    </div>
-  
-    <div class="rights-div">
-      <p>© 2023 by Splash Wash. Proudly created with <span>shalom.com</span></p>
-       
-      <p>Privacy Policy <span></span>  Terms of Use</p>
-    </div>
-  </footer> 
-  <!-- End of Footer -->
-  
-</body>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- Semantic UI JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#date").calendar({
+          type: "date",
+        });
+        $("#time").calendar({
+          type: "time",
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 /* nav styles */
-nav {
+.navigation-bar {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -165,6 +165,20 @@ nav {
 .basic-info-div-wrap {
     display: flex;
 
+}
+
+.ui.form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    
+}
+
+.ui-form-btns {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 /* End of booking style */
 
