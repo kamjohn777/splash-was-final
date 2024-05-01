@@ -71,19 +71,23 @@ nav {
 
 /* img styles */
 #section-img {
-    width: 100%; /* Full width */
-    height: 500px; /* Full viewport height */
-    overflow: hidden; /* Hide anything that goes outside the section */
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
 }
 
 .img-wrapper {
     width: 100%;
-    height: 70%;
+    height: 100%;
     background-image: url(../assets/headlight-img.jpg);
     background-position: revert-layer;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative; /* Needed for pseudo-element positioning */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-wrapper::after {
@@ -95,14 +99,81 @@ nav {
     height: 100%;
     background: rgb(0 0 0 / 39%);
 }
+
+
+.contact-position-wrap {
+    /* width: 400px; */
+    width: fit-content;
+    color: white;
+    font-family: sans-serif;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 112px;
+    justify-content: space-evenly;
+}
+
+.contact-position-wrap h2 {
+    margin: 0;
+    font-size: 5rem;
+}
+.contact-position-wrap p {
+    margin: 0;
+    font-size: 1.2rem;
+}
 /* end of img styles */
 
 
 
 
+/* Get in touch section */
+.get-in-touch-sec {
+    display: flex;
+    height: 500px;
+    background: red;
+    justify-content: space-around;
+}
+.sub-faqs-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 320px;
+    margin: auto;
+    margin-top: 30px;
+}
 
+.ob-sec-circles {
+    height: 2px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #032498;
+}
 
+.gits-right-side {
+    position: relative;
+    background: yellow;
+    height: 100%;
+    width: 43%;
+}
 
+.blue-box-right {
+    /* Add your styles for the blue box here */
+}
+
+.right-side-form {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    /* Add other styles as needed */
+}
+
+.send-button {
+    background: linear-gradient(to right, #89CFF0, #3BA6D8);
+    color: white; /* Change the text color to white */
+    border: none; /* Remove the default border */
+}
+/* End of get in touch section */
 
 
 
