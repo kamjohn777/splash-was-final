@@ -130,17 +130,20 @@ nav {
 /* Get in touch section */
 .get-in-touch-sec {
     display: flex;
-    height: 500px;
-    background: red;
+    /* height: 500px; */
+    height: 1000px;
+    /* background: red; */
     justify-content: space-around;
 }
 .sub-faqs-wrap {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 320px;
+    width: 500px;
+    /* width: 320px; */
     margin: auto;
     margin-top: 30px;
+    margin-left: 0;
 }
 
 .ob-sec-circles {
@@ -149,6 +152,76 @@ nav {
     border-radius: 50%;
     background-color: #032498;
 }
+
+.sos-h3-wrap h3 {
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-right: 10px;
+    /* margin-right: 25px; */
+}
+
+.gits-left-side p {
+    width: 28rem;
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    color: #c6c6c6;
+    line-height: 1.5;
+}
+
+.contact-icons-containers {
+    margin-top: 50px;
+    height: 450px;
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+    /* font-size: 67px; */
+    justify-content: space-evenly;
+
+}
+
+.cic-div-1 {
+    /* display: flex;
+    gap: 20px; */
+
+    display: flex;
+    gap: 20px;
+    height: 70px;
+    /* background: pink; */
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.cic-div-1 img {
+    height: 50px;
+}
+
+
+
+.social-medias-wrap {
+    display: flex;
+    height: 100px;
+    width: 400px;
+    justify-content: space-around;
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+  
+  .smw-icon-wrap {
+    background: radial-gradient(circle, #89cff0, #3ba6d8);    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 6px #4f4f4f8a;
+  }
+  
+  .fab {
+    font-size: 25px;
+   color: white;
+  }
 
 .gits-right-side {
     position: relative;
