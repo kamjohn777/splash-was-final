@@ -165,7 +165,7 @@ nav {
     margin: 0;
     font-size: 1.1rem;
     font-family: sans-serif;
-    color: #c6c6c6;
+    color: #868686;
     line-height: 1.5;
 }
 
@@ -231,20 +231,41 @@ nav {
 }
 
 .blue-box-right {
-    /* Add your styles for the blue box here */
+    height: 660px;
+    width: 100%;
+    background: linear-gradient(to top, #3BA6D8, #bfeaff);
+    border-radius: 20px;
+    position: absolute;
+    top: 5%;
 }
 
 .right-side-form {
     position: absolute;
-    top: 10px; /* Adjust as needed */
-    left: 10px; /* Adjust as needed */
-    /* Add other styles as needed */
+    top: 10px; 
+    left: 10px; 
 }
 
 .send-button {
     background: linear-gradient(to right, #89CFF0, #3BA6D8);
     color: white; /* Change the text color to white */
     border: none; /* Remove the default border */
+}
+
+.right-side-form {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    padding: 20px; /* Add padding inside the form */
+    margin: 20px; /* Add margin outside the form */
+    background: #fff; /* Change the background color to white */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.send-button {
+    background: linear-gradient(to right, #89CFF0, #3BA6D8);
+    color: white; /* Change the text color to white */
+    border: none; /* Remove the default border */
+    margin-top: 20px; /* Add margin at the top */
 }
 /* End of get in touch section */
 
