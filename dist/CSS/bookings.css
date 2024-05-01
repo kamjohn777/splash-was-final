@@ -95,7 +95,9 @@
 /* booking card style */
 .booking-container {
     display: flex;
-    height: 750px;
+    height: 840px;
+
+    /* height: 750px; */
     width: 86%;
     position: absolute;
     top: 20%;
@@ -256,7 +258,39 @@
     background: var(--form-input-bg);
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* creates 2 columns */
+    grid-template-rows: 1fr 1fr; /* creates 2 rows */
+    gap: 20px; /* adjust as needed */
+  }
+  
+  .grid-item {
+    display: flex;
+    align-items: center; /* centers items vertically */
+    justify-content: start; /* aligns items to the start */
+    padding-left: 30px; /* provides space for the checkmark */
+    position: relative; /* allows absolute positioning of pseudo-elements */
+  }
 
+  .grid-item p {
+    margin-left: 10px;
+  }
+  
+  .grid-item::before {
+    content: "\2713"; /* Unicode for checkmark */
+    position: absolute;
+    left: 0;
+    font-size: 20px; /* adjust as needed */
+    background: linear-gradient(to right, #89CFF0, #3BA6D8);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;  
+}
 /* End of booking style */
 
 
@@ -274,7 +308,8 @@
     margin-bottom: 200px;
     /* margin-top: 500px; */
     /* margin-top: 650px; */
-    margin-top: 730px;
+    /* margin-top: 730px; */
+    margin-top: 830px;
 }
 
 .background-img-container {
