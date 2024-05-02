@@ -129,11 +129,24 @@ nav {
 
 /* Get in touch section */
 .get-in-touch-sec {
+    /*display: flex;
+    height: 1000px;
+    justify-content: space-around;*/
+
+   /* display: flex;
+    height: 1000px;
+    justify-content: center;
+    gap: 15px;*/
+
     display: flex;
     /* height: 500px; */
     height: 1000px;
     /* background: red; */
     justify-content: space-around;
+    gap: 15px;
+    width: 90%;
+    /*background: purple;*/
+    margin: auto;
 }
 .sub-faqs-wrap {
     display: flex;
@@ -150,7 +163,8 @@ nav {
     height: 2px;
     width: 7px;
     border-radius: 50%;
-    background-color: #032498;
+    background-color: #808080;
+   /* background-color: #032498;*/
 }
 
 .sos-h3-wrap h3 {
@@ -225,15 +239,19 @@ nav {
 
 .gits-right-side {
     position: relative;
-    background: yellow;
     height: 100%;
-    width: 43%;
+    /*width: 43%;*/
+
+
+    width: 55%;
 }
 
 .blue-box-right {
-    height: 660px;
+    /* height: 660px; */
+    height: 720px;
     width: 100%;
-    background: linear-gradient(to top, #3BA6D8, #bfeaff);
+    /* background: linear-gradient(to top, #3BA6D8, #bfeaff); */
+    background: linear-gradient(to top, #a6daf3, #bfeaff);
     border-radius: 20px;
     position: absolute;
     top: 5%;
@@ -241,31 +259,67 @@ nav {
 
 .right-side-form {
     position: absolute;
-    top: 10px; 
-    left: 10px; 
+    top: 10%;
+    left: 0;
+    /* padding: 20px; */
+    background: #fff;
+    border-radius: 10px;
+    height: 800px;
+    width: 95%;
+    margin-left: 15px;
+    height: 714px;
+    box-shadow: 0px 0px 10px #80808075;
+
 }
+
+.ui.form {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 35px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-evenly;
+}
+
+.ui.form .field > label {
+    color: #333;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+
+.ui.form .field > input[type=text],
+.ui.form .field > input[type=email] {
+    height: 50px; /* Increase the height of the inputs and textarea */
+    /* Other styles... */
+}
+
+.ui.form .field > textarea {
+    background: #f2f2f2; /* Change the background color to light grey */
+    border: none; /* Remove the default border */
+    padding: 10px; /* Add padding */
+}
+
+
 
 .send-button {
     background: linear-gradient(to right, #89CFF0, #3BA6D8);
-    color: white; /* Change the text color to white */
-    border: none; /* Remove the default border */
-}
-
-.right-side-form {
-    position: absolute;
-    top: 10px; 
-    left: 10px; 
-    padding: 20px; /* Add padding inside the form */
-    margin: 20px; /* Add margin outside the form */
-    background: #fff; /* Change the background color to white */
-    border-radius: 10px; /* Add rounded corners */
-}
-
-.send-button {
-    background: linear-gradient(to right, #89CFF0, #3BA6D8);
-    color: white; /* Change the text color to white */
-    border: none; /* Remove the default border */
-    margin-top: 20px; /* Add margin at the top */
+    color: white;
+    border: none;
+    margin-top: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
 }
 /* End of get in touch section */
 
