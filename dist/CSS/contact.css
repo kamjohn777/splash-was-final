@@ -164,14 +164,12 @@ nav {
     width: 7px;
     border-radius: 50%;
     background-color: #808080;
-   /* background-color: #032498;*/
 }
 
 .sos-h3-wrap h3 {
     font-size: 40px;
     font-family: sans-serif;
     margin-right: 10px;
-    /* margin-right: 25px; */
 }
 
 .gits-left-side p {
@@ -297,8 +295,13 @@ nav {
 
 .ui.form .field > input[type=text],
 .ui.form .field > input[type=email] {
-    height: 50px; /* Increase the height of the inputs and textarea */
-    /* Other styles... */
+    height: 55px;
+    background: #dbdbdba3;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    padding-left: 10px;
+
 }
 
 .ui.form .field > textarea {
