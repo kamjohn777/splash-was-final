@@ -287,7 +287,7 @@ p {
 }
 
 .image-acs-div .first-img {
-  height: 520px; /* Adjust as needed */
+  height: 520px;
   width: 380px;
 }
 
@@ -496,8 +496,6 @@ p {
   line-height: 1.5;
   font-size: 1.2rem;
   color: #42526b;
-
-  /* might remove */
   margin: 17px;
 }
 /* End of our services style code */
@@ -570,7 +568,6 @@ p {
 
 .isc-card {
   width: 25%;
-  background: red;
   height: 230px;
   border-radius: 10px;
   display: flex;
@@ -1378,9 +1375,7 @@ footer {
 }
 /* end of footer style */
 
-
-
-
+/* Media Queries */
 @media screen and (max-width: 768px) {
     /* Nav Section */
     nav {
