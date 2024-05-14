@@ -116,7 +116,7 @@
           <img src="./assets/packages-img.png" alt="Image description" />
           <p class="time">15 - 20 minutes</p>
           <p class="title">Basic Interior Wash</p>
-          <p class="basic-price">Starting at: $20 - $35</p>
+          <p class="basic-price price">Starting at: $20 - $35</p>
           <a href="#" class="card-button"><span>Book Now</span></a>
         </div>
       </div>
@@ -126,7 +126,7 @@
           <img src="./assets/packages-img-1.png" alt="Image description" />
           <p class="time">30 - 45 minutes</p>
           <p class="title">Deluxe Package</p>
-          <p class="deluxe-price">Starting at: $30 - $40</p>
+          <p class="deluxe-price price">Starting at: $30 - $40</p>
           <a href="#" class="card-button"><span>Book Now</span></a>
         </div>
       </div>
@@ -136,7 +136,7 @@
           <img src="./assets/packages-img-2.png" alt="Image description" />
           <p class="time">45 - 60 minutes</p>
           <p class="title">Premium Interior Package</p>
-          <p class="premium-price">Starting at: $50 - $60</p>
+          <p class="premium-price price">Starting at: $50 - $60</p>
           <a href="#" class="card-button"><span>Book Now</span></a>
         </div>
       </div>
@@ -455,23 +455,27 @@
 
         // });
 
-        // calling all buttons
-        const cardBtns = document.querySelectorAll(".card-button");
-        // In the packages page
-        cardBtns.forEach(function (btn) {
-          btn.addEventListener("click", function (e) {
-            e.preventDefault();
-            var cardContainer = this.parentNode;
-            var imgSrc = cardContainer.querySelector("img").src;
-            localStorage.setItem("selectedImgSrc", imgSrc);
-            console.log("Button clicked");
+        $(".card-button").click(function(e) {
+  e.preventDefault();
+  var cardContainer = $(this).parent();
+  var imgSrc = cardContainer.find("img").attr("src");
+  localStorage.setItem("selectedImgSrc", imgSrc);
 
-            // Redirect to the Bookings.html page
-    window.location.href = "Bookings.html";
-          });
-        });
+  var timeDuration = cardContainer.find(".time").text();
+  localStorage.setItem("timeDuration", timeDuration);
 
-       
+  var packageTitle = cardContainer.find(".title").text();
+  localStorage.setItem("packageTitle", packageTitle);
+
+  var packagePrice = cardContainer.find(".price").text();
+  localStorage.setItem("packagePrice", packagePrice);
+  console.log(packagePrice);
+
+  console.log("Button clicked");
+
+  // Redirect to the Bookings.html page
+  window.location.href = "Bookings.html";
+});
       });
     </script>
   </body>
