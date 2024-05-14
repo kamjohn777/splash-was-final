@@ -282,8 +282,14 @@
     </footer>
     <!-- End of Footer -->
 
-    <!-- Semantic UI JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+   <!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- Semantic UI JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<!-- Semantic UI Calendar -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui-calendar/0.0.8/calendar.min.js"></script>
+
+
     <script>
       $(document).ready(function () {
         $("#date").calendar({
@@ -293,6 +299,15 @@
           type: "time",
         });
       });
+      
+         // In the booking page
+         window.onload = function () {
+          var imgSrc = localStorage.getItem("selectedImgSrc");
+          if (imgSrc) {
+            document.querySelector(".sub-right-wrap img").src = imgSrc;
+          }
+        };
+      
     </script>
   </body>
 </html>
