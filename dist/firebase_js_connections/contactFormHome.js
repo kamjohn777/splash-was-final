@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import { getDatabase, ref } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBmno2mvP8YTKKlBdcBb6pPn3l5cb8pKJA",
@@ -28,8 +28,19 @@ function submitForm(e) {
   let name = getElementVal("name");
   let phone = getElementVal("phone");
 
+  saveDetails(selectService, name, phone);
+
   console.log(selectService, name, phone);
 }
+
+const saveDetails = (selectService, name, phone) => {
+    const newContactFormHomePageDB = push(contactFormHomePageDB);
+    set(newContactFormHomePageDB, {
+      selectService: selectService,
+      name: name,
+      phone: phone,
+    });
+};
 
 const getElementVal = (id) => {
   return document.getElementById(id).value;
