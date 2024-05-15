@@ -521,3 +521,27 @@ footer {
   color: black;
 }
 /* end of footer style */
+
+
+.alert-msg {
+  /* width: 100%;
+  background: green;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: sans-serif;
+  display: none; */
+
+  width: 90%;
+  background: #23d523;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: sans-serif;
+  display: none;
+  color: white;
+}

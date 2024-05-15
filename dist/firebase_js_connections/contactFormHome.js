@@ -38,7 +38,7 @@ setTimeout(() => {
     setTimeout(() => {
         document.querySelector('.alert-msg').style.display = 'none';
     }, 2000);
-}, 1000);
+}, 500);
 
 
 
