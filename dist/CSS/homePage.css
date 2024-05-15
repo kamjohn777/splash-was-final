@@ -961,7 +961,7 @@ p {
   justify-content: flex-start;
   margin: auto;
   width: 85%;
-  gap: 18px;
+  gap: 43px;
   margin-top: 50px;
 }
 
@@ -1086,6 +1086,7 @@ p {
   color: #3f3f3ff0;
   font-family: sans-serif;
   line-height: 1.5;
+  margin-top: 10px;
 }
 
 .wpsa-h3-wrap :nth-child(1) {
@@ -1383,6 +1384,18 @@ footer {
   color: black;
 }
 /* end of footer style */
+
+.card-item-img img {
+  height: 250px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.monial-p-div p {
+  height: 90px;
+  line-height: 1.7;
+  color: #3f3f3ff0;
+}
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
