@@ -32,8 +32,18 @@ function submitForm(e) {
   saveDetails(selectService, name, phone);
 
 //   enable alert after form submission
-document.querySelector('.alert-msg').style.display = 'block';
-  console.log(selectService, name, phone);
+setTimeout(() => {
+    document.querySelector('.alert-msg').style.display = 'block';
+
+    setTimeout(() => {
+        document.querySelector('.alert-msg').style.display = 'none';
+    }, 2000);
+}, 1000);
+
+
+
+
+console.log(selectService, name, phone);
 }
 
 const saveDetails = (selectService, name, phone) => {
