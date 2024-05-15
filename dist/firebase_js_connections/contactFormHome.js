@@ -1,3 +1,4 @@
+// import { doc } from "firebase/firestore";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
@@ -30,6 +31,8 @@ function submitForm(e) {
 
   saveDetails(selectService, name, phone);
 
+//   enable alert after form submission
+document.querySelector('.alert-msg').style.display = 'block';
   console.log(selectService, name, phone);
 }
 
