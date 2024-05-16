@@ -236,14 +236,12 @@
   </form> -->
 
       <form id="contact-form" class="contact-form">
-            <!-- Alert -->
-<div class="alert-msg">
-  <i class="ri-mail-check-line"></i>
-    <!-- Your message has been sent successfully! -->
-    Message sent successfully!
-
-  
-</div>
+        <!-- Alert -->
+        <div class="alert-msg">
+          <i class="ri-mail-check-line"></i>
+          <!-- Your message has been sent successfully! -->
+          Message sent successfully!
+        </div>
 
         <div class="form-div-wrap">
           <label for="service-request">Service Request</label>
@@ -350,7 +348,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- <script src="semantic.min.js"></script>    -->
-    <script src="./firebase_js_connections/contactFormHome.js" type="module"></script>
+    <script
+      src="./firebase_js_connections/contactFormHome.js"
+      type="module"
+    ></script>
 
     <script>
       $(document).ready(function () {
@@ -452,6 +453,12 @@
 
         // Event listener for when a user clicks on a car size
         $(".size-car").click(function () {
+          // Remove 'active' class from all .size-car elements
+          $(".size-car").removeClass("active");
+
+          // Add 'active' class to the clicked .size-car element
+          $(this).addClass("active");
+
           // Get the ID of the clicked car size
           var sizeCarId = $(this).attr("id");
 
@@ -466,27 +473,27 @@
 
         // });
 
-        $(".card-button").click(function(e) {
-  e.preventDefault();
-  var cardContainer = $(this).parent();
-  var imgSrc = cardContainer.find("img").attr("src");
-  localStorage.setItem("selectedImgSrc", imgSrc);
+        $(".card-button").click(function (e) {
+          e.preventDefault();
+          var cardContainer = $(this).parent();
+          var imgSrc = cardContainer.find("img").attr("src");
+          localStorage.setItem("selectedImgSrc", imgSrc);
 
-  var timeDuration = cardContainer.find(".time").text();
-  localStorage.setItem("timeDuration", timeDuration);
+          var timeDuration = cardContainer.find(".time").text();
+          localStorage.setItem("timeDuration", timeDuration);
 
-  var packageTitle = cardContainer.find(".title").text();
-  localStorage.setItem("packageTitle", packageTitle);
+          var packageTitle = cardContainer.find(".title").text();
+          localStorage.setItem("packageTitle", packageTitle);
 
-  var packagePrice = cardContainer.find(".price").text();
-  localStorage.setItem("packagePrice", packagePrice);
-  console.log(packagePrice);
+          var packagePrice = cardContainer.find(".price").text();
+          localStorage.setItem("packagePrice", packagePrice);
+          console.log(packagePrice);
 
-  console.log("Button clicked");
+          console.log("Button clicked");
 
-  // Redirect to the Bookings.html page
-  window.location.href = "Bookings.html";
-});
+          // Redirect to the Bookings.html page
+          window.location.href = "Bookings.html";
+        });
       });
     </script>
   </body>
