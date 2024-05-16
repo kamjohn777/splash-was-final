@@ -31,6 +31,20 @@ function submitContactForm(e) {
 
     saveDetails(firstName, lastName, email, message);
 
+     // Clear input fields
+     document.getElementById('first-name').value = '';
+     document.getElementById('last-name').value = '';
+     document.getElementById('email').value = '';
+     document.getElementById('message').value = '';
+
+    setTimeout(() => {
+        document.querySelector('.alert-msg').style.display = 'block';
+
+        setTimeout(() => {
+            document.querySelector('.alert-msg').style.display = 'none';
+        }, 2000);
+    }, 500);
+
     console.log(firstName, lastName, email, message);
 }
 
