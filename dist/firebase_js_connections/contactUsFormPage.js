@@ -17,3 +17,36 @@ const db = getDatabase(app);
 
 // reference form database
 const contactUsFormPageDB = ref(db, "contactUsFormPage");
+
+document.getElementById('contact-us-form').addEventListener('submit', submitContactForm);
+
+function submitContactForm(e) {
+    e.preventDefault();
+    
+    // get values
+    let firstName = getElementVal('first-name');
+    let lastName = getElementVal('last-name');
+    let email = getElementVal('email');
+    let message = getElementVal('message');
+
+    saveDetails(firstName, lastName, email, message);
+
+    console.log(firstName, lastName, email, message);
+}
+
+const saveDetails = (firstName, lastName, email, message) => {
+    const newContactUsFormPageDB = push(contactUsFormPageDB);
+    set(newContactUsFormPageDB, {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        message: message,
+    });
+
+}
+
+
+// function gets the element values
+const getElementVal = (id) => {
+    return document.getElementById(id).value;
+};
