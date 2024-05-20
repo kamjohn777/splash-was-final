@@ -67,95 +67,71 @@
               <p>Card</p>
             </div>
 
-            <div class="pod-item item-one">
+            <div class="pod-item item-2">
               <!-- <i class="ri-paypal-line"></i> -->
               <!-- <p>PayPal</p> -->
               <img src="./assets/google-pay.png" alt="googlePAy">
             </div>
 
-            <div class="pod-item item-one">
+            <div class="pod-item item-3">
               <!-- <i class="ri-google-fill"></i>              -->
                <!-- <p>Google</p> -->
                <img src="./assets/paypal.png" alt="PayPal">
             </div>
           </div>
           <div class="field">
-            <label>Date</label>
-            <div class="ui calendar" id="date">
-              <div class="ui input left icon">
-                <i class="calendar icon"></i>
-                <input type="text" placeholder="Date" />
-              </div>
-            </div>
+            <label>Card Holder Name</label>
+            <!-- <div class="ui calendar" id="date"> -->
+              <!-- <div class="ui input left icon"> -->
+                <input type="text" placeholder="Enter Card holder name" />
+              <!-- </div> -->
+            <!-- </div> -->
           </div>
           <div class="field">
-            <label>Time</label>
-            <div class="ui calendar" id="time">
-              <div class="ui input left icon">
-                <i class="clock icon"></i>
-                <input type="text" placeholder="Time" />
-              </div>
-            </div>
+            <label>Card number</label>
+            <!-- <div class="ui calendar" id="time"> -->
+              <!-- <div class="ui input left icon"> -->
+                <input type="text" placeholder="Enter card number" />
+              <!-- </div> -->
+            <!-- </div> -->
           </div>
-          <div class="two fields">
-            <div class="field">
-              <label>First Name</label>
-              <input type="text" placeholder="First Name" />
-            </div>
-            <div class="field">
-              <label>Last Name</label>
-              <input type="text" placeholder="Last Name" />
-            </div>
-          </div>
-          <div class="two fields">
-            <div class="field">
-              <label>Email Address</label>
-              <input type="email" placeholder="Email Address" />
-            </div>
-            <div class="field">
-              <label>Phone Number</label>
-              <input type="tel" placeholder="Phone Number" />
-            </div>
+          
+          <div class="field">
+            <label>Expire Date</label>
+            <input id="expire-date" type="text" placeholder="Enter expire date" />
           </div>
           <div class="field">
-            <label>Additional Questions</label>
-            <label>Do you have accessories like:</label>
-            <input type="text" placeholder="Enter your answer here" />
-          </div>
-          <div class="field">
-            <label>What is the make and model of vehicle?</label>
-            <input type="text" placeholder="Make and Model" />
+            <label>CVV</label>
+            <input id="cvv" type="text" placeholder="Enter CVV" />
           </div>
 
-          <div class="ui-form-btns">
+          <!-- <div class="ui-form-btns">
             <button class="ui button" type="submit">Confirm Booking</button>
             <button class="ui button" type="reset">Cancel</button>
-          </div>
+          </div> -->
         </div>
       </div>
 
       <div class="right-side-display-of-package">
         <div class="sub-right-wrap">
-          <img src="./assets/packages-img-2.png" alt="Package Image" />
-          <div class="srw-wrap-text">
-            <p>Duration: 3 hours</p>
-            <h2>Package Title</h2>
-            <p>Price: $100</p>
+          <div class="payment-op-select-div">
+            <div class="posd-card pord-1">
+              <input type="checkbox">
+              <p>One Time Payment</p>
+            </div>
+
+            <div class="posd-card pord-2">
+              <input type="checkbox">
+              <div class="pcp2-text-wrap">
+                <p>Monthly Payment</p>
+                <p>Save 10%</p>
+              </div>
+            </div>
           </div>
-          <p class="lorem-para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-            odio sint dicta, asperiores omnis itaque rem impedit cumque
-            necessitatibus ab excepturi explicabo sed enim optio sit accusamus
-            quo non. Alias iusto impedit tempore officiis, amet distinctio
-            voluptates eveniet tempora dolor optio consequuntur, excepturi
-            labore vel.
-          </p>
-          <h3>What's included in this service:</h3>
-          <div class="grid-container">
-            <div class="grid-item"><p>Leather Cloth Clean</p></div>
-            <div class="grid-item"><p>All Plastics clean</p></div>
-            <div class="grid-item"><p>Tire Shine</p></div>
-            <div class="grid-item"><p>Trash removed</p></div>
+          
+          <h3>Winter Packages</h3>
+          <div class="package-overview">
+          
           </div>
         </div>
       </div>
