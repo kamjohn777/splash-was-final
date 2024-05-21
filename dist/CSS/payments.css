@@ -452,10 +452,11 @@
 
 .package-overview {
     padding-left: 18px;
-    padding-right: 18px;
+    padding-right: 25px;
+    /* padding-right: 18px; */
     /* height: 240px; */
     height: 260px;
-    background: red;
+    /* background: red; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -468,6 +469,16 @@
 
 .package-overview div p {
     font-size: 20px; /* Adjust this value to make the font size larger or smaller */
+}
+
+.total {
+    display: flex;
+    width: 100%;
+    /* background: green; */
+    justify-content: space-between;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: x-large;
 }
   /* End Of Payments left side */
   
