@@ -106,8 +106,8 @@
           </div>
 
           <div class="ui-form-btns">
-            <button class="ui button" type="submit">Confirm Booking</button>
-            <button class="ui button" type="reset">Cancel</button>
+            <button class="ui button confirm" type="submit">Confirm Booking</button>
+            <button class="ui button cnacel" type="reset">Cancel</button>
           </div>
         </div>
       </div>
@@ -185,14 +185,12 @@
       </div>
 
       <form id="contact-form" class="contact-form">
-           <!-- Alert -->
-<div class="alert-msg">
-  <i class="ri-mail-check-line"></i>
-    <!-- Your message has been sent successfully! -->
-    Message sent successfully!
-
-  
-</div>
+        <!-- Alert -->
+        <div class="alert-msg">
+          <i class="ri-mail-check-line"></i>
+          <!-- Your message has been sent successfully! -->
+          Message sent successfully!
+        </div>
         <div class="form-div-wrap">
           <label for="service-request">Service Request</label>
           <select id="service-request">
@@ -302,8 +300,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
     <!-- Semantic UI Calendar -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui-calendar/0.0.8/calendar.min.js"></script>
-    <script src="./firebase_js_connections/contactFormHome.js" type="module"></script>
-
+    <script
+      src="./firebase_js_connections/contactFormHome.js"
+      type="module"
+    ></script>
 
     <script>
       $(document).ready(function () {
@@ -315,29 +315,39 @@
         });
       });
 
-      $(window).on("load", function() {
-  var imgSrc = localStorage.getItem("selectedImgSrc");
-  if (imgSrc) {
-    $(".sub-right-wrap img").attr("src", imgSrc);
-  } else {
-    console.log("selectedImgSrc not set in local storage");
-  }
+      $(window).on("load", function () {
+        var imgSrc = localStorage.getItem("selectedImgSrc");
+        if (imgSrc) {
+          $(".sub-right-wrap img").attr("src", imgSrc);
+        } else {
+          console.log("selectedImgSrc not set in local storage");
+        }
 
-  var timeDuration = localStorage.getItem("timeDuration");
-  if (timeDuration) {
-    $(".srw-wrap-text p:first").text("Duration: " + timeDuration);
-  }
+        var timeDuration = localStorage.getItem("timeDuration");
+        if (timeDuration) {
+          $(".srw-wrap-text p:first").text("Duration: " + timeDuration);
+        }
 
-  var packageTitle = localStorage.getItem("packageTitle");
-  if (packageTitle) {
-    $(".srw-wrap-text h2").text(packageTitle);
-  }
+        var packageTitle = localStorage.getItem("packageTitle");
+        if (packageTitle) {
+          $(".srw-wrap-text h2").text(packageTitle);
+        }
 
-  var packagePrice = localStorage.getItem("packagePrice");
-  if (packagePrice) {
-    $(".srw-wrap-text p:last").text(packagePrice);
-  }
-});
+        var packagePrice = localStorage.getItem("packagePrice");
+        if (packagePrice) {
+          $(".srw-wrap-text p:last").text(packagePrice);
+        }
+
+        function confirmBooking() {
+          if(packageTitle && packagePrice) {
+            window.location.href = "./Payments.html";
+          } else {
+            alert("Pleae finish selecting a package before confirming booking.");
+          }
+        }
+
+        $(".ui-form-btns confirm").on("click", confirmBooking);
+      });
     </script>
   </body>
 </html>

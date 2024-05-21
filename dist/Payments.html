@@ -134,7 +134,7 @@
           <div class="package-overview">
             <div>
               <p>Package Price:</p>
-              <p>100</p>
+              <p id="po-price">100</p>
             </div>
             <div>
               <p>Tax:</p>
@@ -222,5 +222,63 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
     <!-- Semantic UI Calendar -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui-calendar/0.0.8/calendar.min.js"></script>
+    <script>
+      // $(window).on('load', function() {
+      //   let packageTitle = localStorage.getItem("packageTitle");
+      //   if (packageTitle) {
+      //     $(".sPackage-overview-wrap h3").text(packageTitle);
+      //   }
+
+      //   let packagePrice = localStorage.getItem("packagePrice");
+      //   if (packagePrice) {
+      //     $(".po-price").text(packagePrice);
+      //   }
+      // })
+        
+      $(window).on('load', function() {
+    let packageTitle = localStorage.getItem("packageTitle");
+    let packagePrice = localStorage.getItem("packagePrice");
+
+    console.log('packageTitle:', packageTitle);
+    console.log('packagePrice:', packagePrice);
+
+    if (packageTitle) {
+        let titleElement = $(".Package-overview-wrap h3");
+        console.log('titleElement:', titleElement);
+        titleElement.text(packageTitle);
+    }
+
+    if (packagePrice) {
+        // Extract the number from the string
+        let prices = packagePrice.match(/\d+/g).map(Number);
+
+        console.log('prices:', prices);
+
+        // calculate average 
+        let total = prices.reduce((a, b) => a + b, 0);
+        let average = total / prices.length;
+
+        console.log('total:', total);
+        console.log('average:', average); 
+
+        let priceElement = $("#po-price");
+        console.log('priceElement:', priceElement);
+        priceElement.text(`$${average.toFixed(2)}`);
+
+        // Calculate tax
+        let taxRate = 8.25 / 100;
+        let tax = average * taxRate;
+
+        console.log('tax:', tax);
+
+        let taxElement = $(".package-overview div:nth-child(2) p:nth-child(2)");
+        console.log('taxElement:', taxElement);
+        taxElement.text(`$${tax.toFixed(2)}`);
+    }
+});
+
+      
+    </script>
+    
   </body>
 </html>
