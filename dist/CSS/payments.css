@@ -108,7 +108,8 @@
     height: 688px;
     width: 90%;
     position: absolute;
-    top: 40%;
+    /* top: 40%; */
+    top: 18%;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
