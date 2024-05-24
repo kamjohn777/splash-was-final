@@ -55,14 +55,16 @@
         />
 
         <!-- Booking Details Form -->
-        <div class="ui form">
+        <!-- <form id="div-booking-form" class="ui form" autocomplete="off"> -->
+          <form id="div-booking-form" class="ui form">
+
           <h3 class="ui dividing header">Booking Details</h3>
           <div class="field">
             <label>Date</label>
             <div class="ui calendar" id="date">
               <div class="ui input left icon">
                 <i class="calendar icon"></i>
-                <input type="text" placeholder="Date" />
+                <input type="text" id="dateInput" placeholder="Date" />
               </div>
             </div>
           </div>
@@ -71,45 +73,51 @@
             <div class="ui calendar" id="time">
               <div class="ui input left icon">
                 <i class="clock icon"></i>
-                <input type="text" placeholder="Time" />
+                <input type="text" id="timeInput" placeholder="Time" />
               </div>
             </div>
           </div>
           <div class="two fields">
             <div class="field">
               <label>First Name</label>
-              <input type="text" placeholder="First Name" />
+              <input type="text" id="firstName" placeholder="First Name" />
             </div>
             <div class="field">
               <label>Last Name</label>
-              <input type="text" placeholder="Last Name" />
+              <input type="text" id="lastName" placeholder="Last Name" />
             </div>
           </div>
           <div class="two fields">
             <div class="field">
               <label>Email Address</label>
-              <input type="email" placeholder="Email Address" />
+              <input type="email" id="email" placeholder="Email Address" />
             </div>
             <div class="field">
               <label>Phone Number</label>
-              <input type="tel" placeholder="Phone Number" />
+              <input type="tel" id="phoneInput" placeholder="Phone Number" />
             </div>
           </div>
           <div class="field">
             <label>Additional Questions</label>
             <label>Do you have accessories like:</label>
-            <input type="text" placeholder="Enter your answer here" />
+            <input
+              type="text"
+              id="additionalQuestions"
+              placeholder="Enter your answer here"
+            />
           </div>
           <div class="field">
             <label>What is the make and model of vehicle?</label>
-            <input type="text" placeholder="Make and Model" />
+            <input type="text" id="vehicle" placeholder="Make and Model" />
           </div>
 
           <div class="ui-form-btns">
-            <button class="ui button confirm" type="submit">Confirm Booking</button>
-            <button class="ui button cnacel" type="reset">Cancel</button>
+            <button id="booking-form-sub-btn" class="ui button confirm" type="submit">
+              Confirm Booking
+            </button>
+            <button class="ui button cancel" type="reset">Cancel</button>
           </div>
-        </div>
+        </form>
       </div>
 
       <div class="right-side-display-of-package">
@@ -301,11 +309,28 @@
     <!-- Semantic UI Calendar -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui-calendar/0.0.8/calendar.min.js"></script>
     <script
-      src="./firebase_js_connections/contactFormHome.js"
+      src="./firebase_js_connections/bookingsForm.js"
       type="module"
     ></script>
+    <!-- <script
+      src="./firebase_js_connections/contactFormHome.js"
+      type="module"
+    ></script> -->
 
-    <script>
+    <!-- <script>
+  function confirmBooking() {
+          var packageTitle = localStorage.getItem("packageTitle");
+          var packagePrice = localStorage.getItem("packagePrice");
+          if (packageTitle && packagePrice) {
+            bookingsFormSubmit();
+            window.location.href = "./Payments.html";
+          } else {
+            alert(
+              "Please finish selecting a package before confirming booking."
+            );
+          }
+        }
+
       $(document).ready(function () {
         $("#date").calendar({
           type: "date",
@@ -313,6 +338,7 @@
         $("#time").calendar({
           type: "time",
         });
+        $(".ui-form-btns .confirm").on("click", confirmBooking);
       });
 
       $(window).on("load", function () {
@@ -337,17 +363,7 @@
         if (packagePrice) {
           $(".srw-wrap-text p:last").text(packagePrice);
         }
-
-        function confirmBooking() {
-          if(packageTitle && packagePrice) {
-            window.location.href = "./Payments.html";
-          } else {
-            alert("Pleae finish selecting a package before confirming booking.");
-          }
-        }
-
-        $(".ui-form-btns confirm").on("click", confirmBooking);
       });
-    </script>
+    </script> -->
   </body>
 </html>
