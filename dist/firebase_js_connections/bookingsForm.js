@@ -59,14 +59,14 @@ function bookingsFormSubmit() {
 
     console.log(date, time, firstName, lastName, email, phone, additionalQuestions, vehicle);
 
-    saveDetails(date, time, firstName, lastName, email, phone, additionalQuestions, vehicle);
+    return saveDetails(date, time, firstName, lastName, email, phone, additionalQuestions, vehicle);
 
     // window.location.href = "../Payments.html";
 }
 
 const saveDetails = (date, time, firstName, lastName, email, phone, additionalQuestions, vehicle) => {
     const newBookingsForm = push(bookingsForm);
-    set(newBookingsForm, {
+   return set(newBookingsForm, {
       date: date,
       time: time,
       firstName: firstName,

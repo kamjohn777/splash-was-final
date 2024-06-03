@@ -1201,6 +1201,13 @@
 
       window.addEventListener("load", CheckCred);
       SignOutBtn.click(SignOut);
+
+      // Check if the URL has the 'payment=success' query parameter
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('payment') === 'success') {
+    alert('Payment was successful!');
+    console.log('Payment was successful!');
+}
     </script>
 <script src="./bundle.js"></script>
     <!-- Your custom script -->

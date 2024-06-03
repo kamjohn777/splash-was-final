@@ -317,18 +317,20 @@
       type="module"
     ></script> -->
     <script>
-  function confirmBooking() {
-          var packageTitle = localStorage.getItem("packageTitle");
-          var packagePrice = localStorage.getItem("packagePrice");
-          if (packageTitle && packagePrice) {
-            bookingsFormSubmit();
-            window.location.href = "./Payments.html";
-          } else {
-            alert(
-              "Please finish selecting a package before confirming booking."
-            );
-          }
+  async function confirmBooking() {
+    var packageTitle = localStorage.getItem("packageTitle");
+    var packagePrice = localStorage.getItem("packagePrice");
+    if (packageTitle && packagePrice) {
+        try {
+            await bookingsFormSubmit();
+            window.location.href = 'http://localhost:3000/go-to-payment';
+        } catch (error) {
+            console.error('Error submitting booking form:', error);
         }
+    } else {
+        alert("Please finish selecting a package before confirming booking.");
+    }
+}
 
       $(document).ready(function () {
         $("#date").calendar({
@@ -337,7 +339,7 @@
         $("#time").calendar({
           type: "time",
         });
-        $(".ui-form-btns .confirm").on("click", confirmBooking);
+        $("#booking-form-sub-btn").on("click", confirmBooking);
       });
 
       $(window).on("load", function () {

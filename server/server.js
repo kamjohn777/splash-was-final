@@ -6,6 +6,7 @@ const cors = require('cors');
 app.use(express.json());
 app.use(express.static('../dist'));
 app.use(express.static('../dist/CSS'));
+const path = require('path');
 // app.use(express.static('../dist/Payments.html'));
 app.use(cors({
     origin: "http://localhost:5502"
@@ -14,6 +15,10 @@ app.use(cors({
 app.get('/', (req, res) => {
     res.send('Hello, world!');
   });
+
+  app.get('/go-to-payment', (req, res) => {
+    res.sendFile(path.join(__dirname, '../dist', 'Payments.html'));
+});
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
@@ -44,7 +49,8 @@ app.post('/create-checkout-session', async (req, res) => {
                     quantity: item.quantity,
                 };
             }),
-        success_url: `${process.env.CLIENT_URL}/success.html`,
+        // success_url: `${process.env.CLIENT_URL}/dist/Home.html`,
+        success_url: `${process.env.CLIENT_URL}/dist/Home.html?payment=success`,
         cancel_url: `${process.env.CLIENT_URL}/dist/Payments.html`, 
        })
        console.log('session:', session);
