@@ -7,6 +7,8 @@ app.use(express.json());
 app.use(express.static('../dist'));
 app.use(express.static('../dist/CSS'));
 const path = require('path');
+const admin = require('firebase-admin');
+
 // app.use(express.static('../dist/Payments.html'));
 // app.use(cors({
 //     origin: "http://localhost:5502"
