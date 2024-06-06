@@ -8,15 +8,30 @@ app.use(express.static('../dist'));
 app.use(express.static('../dist/CSS'));
 const path = require('path');
 // app.use(express.static('../dist/Payments.html'));
+// app.use(cors({
+//     origin: "http://localhost:5502"
+//     origin: "http://127.0.0.1:5502"
+// }));
 app.use(cors({
-    origin: "http://localhost:5502"
+    origin: function (origin, callback) {
+        // allow requests with no origin 
+        // (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        const allowedOrigins = ["http://localhost:5502", "http://127.0.0.1:5502"];
+        if (allowedOrigins.indexOf(origin) === -1) {
+            var msg = 'The CORS policy for this site does not ' +
+                      'allow access from the specified Origin.';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    }
 }));
 
 app.get('/', (req, res) => {
     res.send('Hello, world!');
   });
 
-  app.get('/go-to-payment', (req, res) => {
+  app.get('/payments', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist', 'Payments.html'));
 });
 

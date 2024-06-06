@@ -480,6 +480,9 @@ footer {
 .footer-column p {
   font-size: 1.1rem;
   width: 90%;
+  height: 106px;
+  /* background: red; */
+  line-height: 1.5;
 }
 
 .footer-c-2 h3 {
@@ -499,15 +502,23 @@ footer {
 }
 
 .footer-c-3 ul {
+  /* list-style: none;
+  padding: 0; */
   list-style: none;
-  padding: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 150px;
+    /* background: red; */
 }
 
 .footer-c-3 ul li {
   margin-bottom: 10px;
   display: flex;
   width: 50%;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .footer-c-3 ul li img {
@@ -522,6 +533,7 @@ footer {
   border-radius: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5px 20px;
   margin-top: 25px;
 }

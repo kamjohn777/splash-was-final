@@ -248,23 +248,17 @@
     </section>
     <!-- End of Get in Touch Section -->
 
-    <!-- Footer -->
     <footer>
       <div class="footer-container">
         <div class="footer-column">
           <div class="fc-logo-wrap">
-            <img
-              src="./assets/Screenshot_20240402-031706__01__01 2.png"
-              alt=""
-            />
+            <img src="./assets/Screenshot_20240402-031706__01__01 2.png" alt="">
             <h4>SPLASH WASH</h4>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officia
-            nam nemo recusandae architecto facilis minima?.
-          </p>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officia nam nemo recusandae architecto facilis minima?.</p> -->
+          <p>Splash Wash provides premium car detailing services with a focus on quality and customer satisfaction. Trust us to keep your car looking its best.</p>
         </div>
-        <div class="footer-column footer-c-2">
+        <div class="footer-column  footer-c-2">
           <h3>Links</h3>
           <ul>
             <li>Home</li>
@@ -276,28 +270,17 @@
         <div class="footer-column footer-c-3">
           <h3>Contact Us</h3>
           <ul>
-            <li>
-              <img src="./assets/clarity_email-solid.png" alt="" />
-              Lorem, ipsum dolor.
-            </li>
-            <li>
-              <img src="./assets/Group (1).png" alt="" />
-              Lorem, ipsum dolor.
-            </li>
-            <li>
-              <img src="./assets/Group.png" alt="" />
-              Lorem, ipsum dolor.
-            </li>
+            <li><img src="./assets/clarity_email-solid.png" alt="Email Icon"> info@splashwash.com</li>
+            <li><img src="./assets/Group (1).png" alt="Phone Icon"> +1 (234) 567-8900</li>
+            <li><img src="./assets/Group.png" alt="Location Icon"> 123 Car Wash Ave, Clean City, CC 12345</li>
           </ul>
         </div>
       </div>
-
+    
       <div class="rights-div">
-        <p>
-          © 2023 by Splash Wash. Proudly created with <span>shalom.com</span>
-        </p>
-
-        <p>Privacy Policy <span></span> Terms of Use</p>
+        <p>© 2023 by Splash Wash. Proudly created with <span>shalom.com</span></p>
+         
+        <p>Privacy Policy <span></span>  Terms of Use</p>
       </div>
     </footer>
     <!-- End of Footer -->
@@ -316,14 +299,22 @@
       src="./firebase_js_connections/contactFormHome.js"
       type="module"
     ></script> -->
-    <script>
-  async function confirmBooking() {
+    <script type="module">
+      import { bookingsFormSubmit } from "./firebase_js_connections/bookingsForm.js";
+      
+ async function confirmBooking(e) {
+  e.preventDefault();
+
     var packageTitle = localStorage.getItem("packageTitle");
     var packagePrice = localStorage.getItem("packagePrice");
     if (packageTitle && packagePrice) {
         try {
             await bookingsFormSubmit();
-            window.location.href = 'http://localhost:3000/go-to-payment';
+            // Create a new element to display the success message
+            var successMessage = document.createElement('p');
+            successMessage.textContent = 'Booking confirmed successfully!';
+            // Append the success message to the body of the document
+            document.body.appendChild(successMessage);
         } catch (error) {
             console.error('Error submitting booking form:', error);
         }

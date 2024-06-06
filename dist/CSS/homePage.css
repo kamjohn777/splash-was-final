@@ -267,7 +267,8 @@ p {
 
 /* About Company styles */
 #about-company-sec {
-  margin-top: 280px;
+  /* margin-top: 280px; */
+  margin-top: 250px;
   display: flex;
   width: 100%;
   height: 660px;
@@ -447,13 +448,15 @@ p {
 }
 
 #ser-card-white {
-  height: 4%;
+  /* height: 4%; */
+  height: 400px;
   width: 20%;
   background-color: white;
   border-radius: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-around;
   gap: 25px;
   padding: 12px;
 }
@@ -484,6 +487,7 @@ p {
   margin: 0;
   font-size: 1.6rem;
   font-family: sans-serif;
+  margin-left: 18px;
 }
 
 .sc-img-div img {
@@ -512,7 +516,8 @@ p {
 }
 
 .soos-sub-wrap {
-  width: 90%;
+  /* width: 90%; */
+  width: 85%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -569,7 +574,9 @@ p {
   margin: auto;
   margin-top: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
 }
 
 .isc-card {

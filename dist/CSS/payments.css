@@ -104,7 +104,7 @@
     background: #fff;
     box-shadow: 0px 0px 16px #00000038; */
 
-    display: flex;
+    /* display: flex; */
     height: 688px;
     width: 90%;
     position: absolute;
@@ -162,7 +162,8 @@
 
     /* height: 80%; */
     height: 90%;
-    width: 50%;
+    /* width: 50%; */
+    width: 100%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -181,7 +182,8 @@
     margin-right: auto; */
     position: absolute;
     top: 90%;
-    left: 70%;
+    left: 45%;
+    /* left: 70%; */
   }
   
   .sub-right-wrap {
@@ -210,7 +212,7 @@
     width: 100%;
     height: 100%;
     margin: auto;
-    justify-content: space-evenly;
+    justify-content: center;
     /* background: green; */
   }
   
@@ -436,7 +438,8 @@
     /* margin: auto; */
     width: 90%;
     /* height: 420px; */
-    height: 390px;
+    /* height: 390px; */
+    height: 520px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -456,7 +459,8 @@
     padding-right: 25px;
     /* padding-right: 18px; */
     /* height: 240px; */
-    height: 260px;
+    /* height: 260px; */
+    height: 370px;
     /* background: red; */
     display: flex;
     flex-direction: column;
@@ -484,99 +488,109 @@
   /* End Of Payments left side */
   
   
-  /* footer style */
-  footer {
-    background-color: #060e2a;
-    color: #fff;
-    padding: 20px 0;
-    margin-top: 680px;
-    /* margin-top: 800px; */
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .footer-column {
-    margin-right: 20px;
-    width: 33%;
-  }
-  
-  .footer-column:last-child {
-    margin-right: 0;
-  }
-  
-  .fc-logo-wrap {
-    display: flex;
-    align-items: center;
-  }
-  
-  .fc-logo-wrap img {
-    height: 45px;
-  }
-  
-  .fc-logo-wrap h4 {
-    margin-left: 10px;
-    font-size: 20px;
-  }
-  
-  .footer-column p {
-    font-size: 1.1rem;
-    width: 90%;
-  }
-  
-  .footer-c-2 h3 {
-    width: 50%;
-    margin: 15px auto;
-  }
-  
-  .footer-c-2 ul {
-    list-style: none;
+ /* footer style */
+footer {
+  background-color: #060e2a;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-column {
+  margin-right: 20px;
+  width: 33%;
+}
+
+.footer-column:last-child {
+  margin-right: 0;
+}
+
+.fc-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.fc-logo-wrap img {
+  height: 45px;
+}
+
+.fc-logo-wrap h4 {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.footer-column p {
+  font-size: 1.1rem;
+  width: 90%;
+  height: 106px;
+  /* background: red; */
+  line-height: 1.5;
+}
+
+.footer-c-2 h3 {
+  width: 50%;
+  margin: 15px auto;
+}
+
+.footer-c-2 ul {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  width: 50%;
+}
+
+.footer-c-2 ul li {
+  margin-bottom: 18px;
+}
+
+.footer-c-3 ul {
+  /* list-style: none;
+  padding: 0; */
+  list-style: none;
     padding: 0;
-    margin: auto;
-    width: 50%;
-  }
-  
-  .footer-c-2 ul li {
-    margin-bottom: 18px;
-  }
-  
-  .footer-c-3 ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-c-3 ul li {
-    margin-bottom: 10px;
     display: flex;
-    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-evenly;
-  }
-  
-  .footer-c-3 ul li img {
-    height: 20px;
-  }
-  
-  .rights-div {
-    background: white;
-    width: 80%;
-    margin: auto;
-    height: 50px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 20px;
-    margin-top: 25px;
-  }
-  
-  .rights-div p {
-    color: black;
-  }
-  /* end of footer style */
+    height: 150px;
+    /* background: red; */
+}
+
+.footer-c-3 ul li {
+  margin-bottom: 10px;
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.footer-c-3 ul li img {
+  height: 20px;
+}
+
+.rights-div {
+  background: white;
+  width: 80%;
+  margin: auto;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  margin-top: 25px;
+}
+
+.rights-div p {
+  color: black;
+}
+/* end of footer style */
   
   
   
