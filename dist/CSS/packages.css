@@ -573,6 +573,19 @@ footer {
     font-size: 14px;
   }
 
+  .size-cars-card-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    margin: 50px auto;
+    width: 100%;
+  }
+
+  .size-car {
+    margin: auto;
+  }
+
   .grid-container {
     display: flex;
     flex-direction: column;
@@ -589,4 +602,19 @@ footer {
     align-items: center;
     justify-content: center;
   }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 370px;
+    padding: 20px;
+    background-color: rgb(255 255 255 / 94%);
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #0000002b;
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    justify-content: space-evenly;
+}
 }
