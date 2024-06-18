@@ -53,3 +53,7 @@ In the development of Splash Wash, proficiency in algorithms, logic, and data st
 By structuring data effectively within Firebase, I ensured that user interactions were handled smoothly and securely. This approach not only met functional requirements but also enhanced the overall reliability and performance of the web application.
 
 Through this project, I strengthened my understanding and application of algorithms and data structures in a practical context, equipping me with valuable skills applicable to future projects and professional endeavors.
+
+
+
+![Splash Image](./assets/fullPageSplashWash.png)
