@@ -56,4 +56,4 @@ Through this project, I strengthened my understanding and application of algorit
 
 
 
-![Splash Image](./assets/fullPageSplashWash.png)
+![Splash Image](/dist/assets/fullPageSplashWash.png)
