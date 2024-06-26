@@ -1,11 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Semantic UI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/bookings.css" />
+    <title>Booking</title>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <div class="nav-div1">
+        <img src="./assets/splash-homepage-logo.png" alt="" />
+      </div>
+
+      <div class="nav-div2">
+        <ul>
+          <li><a href="./Home.html">Home</a></li>
+          <li><a href="./Packages.html">Packages</a></li>
+          <li><a href="./Bookings.html">Booking</a></li>
+          <li><a href="./Contact.html">Contact Us</a></li>
+          <li><a href="./Payments.html">Payments</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-div3">
+        <button class="logout">Sign Up</button>
+        <button class="btn btn-outline-success" type="button" id="signOutBtn">
+          Logout
+        </button>
+      </div>
+    </nav>
+
+    <!-- Blue background top sec -->
+    <div class="blue-background">Home >>> Booking</div>
+    <!-- End of blue background sec -->
+
+    <!-- Booking Container section -->
+    <div class="booking-container">
+      <div class="left-side-booking-form">
+        <!-- <h3>Booking Details</h3> -->
+
+        <!-- Semantic UI CSS -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        />
+
+        <!-- Booking Details Form -->
+        <!-- <form id="div-booking-form" class="ui form" autocomplete="off"> -->
+          <form  id="div-booking-form" class="ui form">
+
+          <h3 class="ui dividing header">Booking Details</h3>
+          <div class="field">
+            <label>Date</label>
+            <div class="ui calendar" id="date">
+              <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" id="dateInput" placeholder="Date" />
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Time</label>
+            <div class="ui calendar" id="time">
+              <div class="ui input left icon">
+                <i class="clock icon"></i>
+                <input type="text" id="timeInput" placeholder="Time" />
+              </div>
+            </div>
+          </div>
+          <div class="two fields">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" id="firstName" placeholder="First Name" />
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input type="text" id="lastName" placeholder="Last Name" />
+            </div>
+          </div>
+          <div class="two fields">
+            <div class="field">
+              <label>Email Address</label>
+              <input type="email" id="email" placeholder="Email Address" />
+            </div>
+            <div class="field">
+              <label>Phone Number</label>
+              <input type="tel" id="phoneInput" placeholder="Phone Number" />
+            </div>
+          </div>
+          <div class="field">
+            <label>Additional Questions</label>
+            <label>Do you have accessories like:</label>
+            <input
+              type="text"
+              id="additionalQuestions"
+              placeholder="Enter your answer here"
+            />
+          </div>
+          <div class="field">
+            <label>What is the make and model of vehicle?</label>
+            <input type="text" id="vehicle" placeholder="Make and Model" />
+          </div>
+
+          <div class="ui-form-btns">
+            <button id="booking-form-sub-btn" class="ui button confirm" type="submit">
+              Confirm Booking
+            </button>
+            <button class="ui button cancel" type="reset">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="right-side-display-of-package">
+        <div class="sub-right-wrap">
+          <img src="./assets/packages-img-2.png" alt="Package Image" />
+          <div class="srw-wrap-text">
+            <p>Duration: 3 hours</p>
+            <h2>Package Title</h2>
+            <p>Price: $100</p>
+          </div>
+          <p class="lorem-para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+            odio sint dicta, asperiores omnis itaque rem impedit cumque
+            necessitatibus ab excepturi explicabo sed enim optio sit accusamus
+            quo non. Alias iusto impedit tempore officiis, amet distinctio
+            voluptates eveniet tempora dolor optio consequuntur, excepturi
+            labore vel.
+          </p>
+          <h3>What's included in this service:</h3>
+          <div class="grid-container">
+            <div class="grid-item"><p>Leather Cloth Clean</p></div>
+            <div class="grid-item"><p>All Plastics clean</p></div>
+            <div class="grid-item"><p>Tire Shine</p></div>
+            <div class="grid-item"><p>Trash removed</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of booking container section -->
+
+    <!-- Get in Touch Section -->
+    <section id="get-in-touch-sec">
+      <div class="background-img-container"></div>
+
+      <div class="gits-content-txt">
+        <h2>Get in Touch With Us</h2>
+        <p>
+          Have questions about our comprehensive range of car washing services?
+          Want to schedule an appointment for a professional clean that leaves
+          your vehicle sparkling? Get in touch with us today and let our
+          friendly team assist you every step of the way!
+        </p>
+
+        <div class="contact-info">
+          <div class="sub-first-wrap">
+            <div class="contact-info-item">
+              <img
+                class="contact-icon"
+                src="./assets/clarity_email-solid.png"
+                alt="Phone icon"
+              />
+            </div>
+            <div class="contact-info-item">
+              <h4 class="contact-title">Email address</h4>
+              <p class="contact-detail">info@carwash.com</p>
+            </div>
+          </div>
+
+          <div class="sub-first-wrap">
+            <div class="contact-info-item">
+              <img
+                class="contact-icon"
+                src="./assets/Group (1).png"
+                alt="Phone icon"
+              />
+            </div>
+            <div class="contact-info-item">
+              <h4 class="contact-title">Houston Phone Number</h4>
+              <p class="contact-detail">123-456-7890</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <!-- Alert -->
+        <div class="alert-msg">
+          <i class="ri-mail-check-line"></i>
+          <!-- Your message has been sent successfully! -->
+          Message sent successfully!
+        </div>
+        <div class="form-div-wrap">
+          <label for="service-request">Service Request</label>
+          <select id="service-request">
+            <option value="">--Please choose an option--</option>
+            <option value="service1">Service 1</option>
+            <option value="service2">Service 2</option>
+            <option value="service3">Service 3</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+
+        <div class="form-div-wrap">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Name" />
+        </div>
+
+        <div class="form-div-wrap">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Phone Number" />
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="social-medias-wrap">
+        <div class="smw-icon-wrap">
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+        <div class="smw-icon-wrap">
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="smw-icon-wrap">
+          <a href="https://www.twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <div class="smw-icon-wrap">
+          <a href="https://www.linkedin.com" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End of Get in Touch Section -->
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <div class="fc-logo-wrap">
+            <img src="./assets/Screenshot_20240402-031706__01__01 2.png" alt="">
+            <h4>SPLASH WASH</h4>
+          </div>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officia nam nemo recusandae architecto facilis minima?.</p> -->
+          <p>Splash Wash provides premium car detailing services with a focus on quality and customer satisfaction. Trust us to keep your car looking its best.</p>
+        </div>
+        <div class="footer-column  footer-c-2">
+          <h3>Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Booking</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div class="footer-column footer-c-3">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><img src="./assets/clarity_email-solid.png" alt="Email Icon"> info@splashwash.com</li>
+            <li><img src="./assets/Group (1).png" alt="Phone Icon"> +1 (234) 567-8900</li>
+            <li><img src="./assets/Group.png" alt="Location Icon"> 123 Car Wash Ave, Clean City, CC 12345</li>
+          </ul>
+        </div>
+      </div>
     
-</body>
+      <div class="rights-div">
+        <p>© 2023 by Splash Wash. Proudly created with <span>shalom.com</span></p>
+         
+        <p>Privacy Policy <span></span>  Terms of Use</p>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Semantic UI JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <!-- Semantic UI Calendar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui-calendar/0.0.8/calendar.min.js"></script>
+    <script
+      src="./firebase_js_connections/bookingsForm.js"
+      type="module"
+    ></script>
+    <!-- <script
+      src="./firebase_js_connections/contactFormHome.js"
+      type="module"
+    ></script> -->
+    <script type="module">
+      import { bookingsFormSubmit } from "./firebase_js_connections/bookingsForm.js";
+      
+ async function confirmBooking(e) {
+  e.preventDefault();
+
+    var packageTitle = localStorage.getItem("packageTitle");
+    var packagePrice = localStorage.getItem("packagePrice");
+    if (packageTitle && packagePrice) {
+        try {
+            await bookingsFormSubmit();
+            // Create a new element to display the success message
+            var successMessage = document.createElement('p');
+            successMessage.textContent = 'Booking confirmed successfully!';
+            // Append the success message to the body of the document
+            document.body.appendChild(successMessage);
+        } catch (error) {
+            console.error('Error submitting booking form:', error);
+        }
+    } else {
+        alert("Please finish selecting a package before confirming booking.");
+    }
+}
+
+      $(document).ready(function () {
+        $("#date").calendar({
+          type: "date",
+        });
+        $("#time").calendar({
+          type: "time",
+        });
+        $("#booking-form-sub-btn").on("click", confirmBooking);
+      });
+
+      $(window).on("load", function () {
+        var imgSrc = localStorage.getItem("selectedImgSrc");
+        if (imgSrc) {
+          $(".sub-right-wrap img").attr("src", imgSrc);
+        } else {
+          console.log("selectedImgSrc not set in local storage");
+        }
+
+        var timeDuration = localStorage.getItem("timeDuration");
+        if (timeDuration) {
+          $(".srw-wrap-text p:first").text("Duration: " + timeDuration);
+        }
+
+        var packageTitle = localStorage.getItem("packageTitle");
+        if (packageTitle) {
+          $(".srw-wrap-text h2").text(packageTitle);
+        }
+
+        var packagePrice = localStorage.getItem("packagePrice");
+        if (packagePrice) {
+          $(".srw-wrap-text p:last").text(packagePrice);
+        }
+      });
+    </script>
+  </body>
 </html>

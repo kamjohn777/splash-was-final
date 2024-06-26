@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Semantic UI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/payments.css" />
+    <title>Booking</title>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <div class="nav-div1">
+        <img src="./assets/splash-homepage-logo.png" alt="" />
+      </div>
+
+      <div class="nav-div2">
+        <ul>
+          <li><a href="./Home.html">Home</a></li>
+          <li><a href="./Packages.html">Packages</a></li>
+          <li><a href="./Bookings.html">Booking</a></li>
+          <li><a href="./Contact.html">Contact Us</a></li>
+          <li><a href="./Payments.html">Payments</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-div3">
+        <button class="logout">Sign Up</button>
+        <button class="btn btn-outline-success" type="button" id="signOutBtn">
+          Logout
+        </button>
+      </div>
+    </nav>
+
+    <!-- Blue background top sec -->
+    <div class="blue-background">Home >>> Booking >>> Payments</div>
+    <!-- End of blue background sec -->
+
+    <!-- Booking Container section -->
+    <div class="booking-container">
+      <div class="right-side-display-of-package">
+        <div class="sub-right-wrap">
+          <!-- <div class="payment-op-select-div">
+            <div class="posd-card pord-1">
+              <input type="checkbox" />
+              <p>One Time Payment</p>
+            </div>
+
+            <div class="posd-card pord-2">
+              <input type="checkbox" />
+              <div class="pcp2-text-wrap">
+                <p>Monthly Payment</p>
+                <p>Save 10%</p>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="Package-overview-wrap">
+            <h3>Winter Packages</h3>
+            <div class="package-overview">
+              <div>
+                <p>Package Price:</p>
+                <p id="po-price">100</p>
+              </div>
+              <div>
+                <p>Tax:</p>
+                <p>0</p>
+              </div>
+              <div>
+                <p>Process Charge:</p>
+                <p>$1</p>
+              </div>
+              <div>
+                <p>Discount:</p>
+                <p>5%</p>
+              </div>
+            </div>
+            <hr />
+            <div class="total">
+              <p>Total Price</p>
+              <p>Price</p>
+            </div>
+          </div>
+
+          <button id="pay-btn" class="payment-btn">Done</button>
+        </div>
+      </div>
+    </div>
+    <!-- End of booking container section -->
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <div class="fc-logo-wrap">
+            <img src="./assets/Screenshot_20240402-031706__01__01 2.png" alt="">
+            <h4>SPLASH WASH</h4>
+          </div>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officia nam nemo recusandae architecto facilis minima?.</p> -->
+          <p>Splash Wash provides premium car detailing services with a focus on quality and customer satisfaction. Trust us to keep your car looking its best.</p>
+        </div>
+        <div class="footer-column  footer-c-2">
+          <h3>Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Booking</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div class="footer-column footer-c-3">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><img src="./assets/clarity_email-solid.png" alt="Email Icon"> info@splashwash.com</li>
+            <li><img src="./assets/Group (1).png" alt="Phone Icon"> +1 (234) 567-8900</li>
+            <li><img src="./assets/Group.png" alt="Location Icon"> 123 Car Wash Ave, Clean City, CC 12345</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="rights-div">
+        <p>© 2023 by Splash Wash. Proudly created with <span>shalom.com</span></p>
+         
+        <p>Privacy Policy <span></span>  Terms of Use</p>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Semantic UI JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <!-- Semantic UI Calendar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui-calendar/0.0.8/calendar.min.js"></script>
+    <script src="./paymentScript.js"></script>
+    <script>
+      $(window).on("load", function () {
+        let packageTitle = localStorage.getItem("packageTitle");
+        let packagePrice = localStorage.getItem("packagePrice");
+
+        console.log("packageTitle:", packageTitle);
+        console.log("packagePrice:", packagePrice);
+
+        if (packageTitle) {
+          let titleElement = $(".Package-overview-wrap h3");
+          console.log("titleElement:", titleElement);
+          titleElement.text(packageTitle);
+        }
+
+        if (packagePrice) {
+          // Extract the number from the string
+          let prices = packagePrice.match(/\d+/g).map(Number);
+
+          console.log("prices:", prices);
+
+          // calculate average
+          let total = prices.reduce((a, b) => a + b, 0);
+          let average = total / prices.length;
+
+          console.log("total:", total);
+          console.log("average:", average);
+
+          let priceElement = $("#po-price");
+          console.log("priceElement:", priceElement);
+          priceElement.text(`$${average.toFixed(2)}`);
+
+          // Calculate tax
+          let taxRate = 8.25 / 100;
+          let tax = average * taxRate;
+
+          console.log("tax:", tax);
+
+          let taxElement = $(
+            ".package-overview div:nth-child(2) p:nth-child(2)"
+          );
+          console.log("taxElement:", taxElement);
+          taxElement.text(`$${tax.toFixed(2)}`);
+
+          // Apply processing charge
+          let processCharge = 1; // Assuming $1 processing charge
+          let totalWithCharge = average + tax + processCharge;
+
+          // Apply discount
+          let discountRate = 5 / 100; // Assuming 5% discount
+          let discount = totalWithCharge * discountRate;
+          let finalTotal = totalWithCharge - discount;
+
+          console.log("finalTotal:", finalTotal);
+
+          let totalElement = $(".total p:nth-child(2)");
+          console.log("totalElement:", totalElement);
+          totalElement.text(`$${finalTotal.toFixed(2)}`);
+        }
+      });
+    </script>
+  </body>
+</html>
