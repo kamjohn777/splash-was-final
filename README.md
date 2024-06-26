@@ -57,3 +57,7 @@ Through this project, I strengthened my understanding and application of algorit
 
 
 ![Splash Image](/dist/assets/fullPageSplashWash.png)
+![Splash Image Booking](./dist/assets/screencapture-file-C-Users-JoKa981-Desktop-multiverse-portfolio-2-0-splash-was-final-dist-Bookings-html-2024-06-26-09_25_43.png)
+![Splash Image Packages](./dist/assets/screencapture-file-C-Users-JoKa981-Desktop-multiverse-portfolio-2-0-splash-was-final-dist-Packages-html-2024-06-26-09_27_06.png)
+![Splash Image Packages](./dist/assets/screencapture-file-C-Users-JoKa981-Desktop-multiverse-portfolio-2-0-splash-was-final-dist-Contact-html-2024-06-26-09_28_55.png)
+![Splash Image Register](./dist/assets/screenCapture30.png)
