@@ -30,7 +30,7 @@ app.use(cors({
 }));
 
 app.get('/', (req, res) => {
-    res.send('Hello, world!');
+    res.send('../dist/Home.html');
   });
 
   app.get('/payments', (req, res) => {
@@ -79,4 +79,6 @@ app.post('/create-checkout-session', async (req, res) => {
     // res.json({ url: 'hello' })
 })
 
-app.listen(3000)
+app.listen(3001, function() {
+    console.log('Server is running on port 3001');
+})
